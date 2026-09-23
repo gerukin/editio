@@ -1,0 +1,4 @@
+ID,Description,State
+7,A description with enough content to benefit from the wider viewport. Resize to see it receive available space while the short columns stay compact.,Ready
+104,"A second long description, with a comma and 日本語, demonstrates the shared CSV and Markdown layout rules without adding Markdown interpretation.",Done
+2,Short text.,Ready

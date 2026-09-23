@@ -1,0 +1,22 @@
+Item,Description
+01,First record
+02,Second record
+03,Third record
+04,Fourth record
+05,Fifth record
+06,Sixth record
+07,Seventh record
+08,Eighth record
+09,Ninth record
+10,Tenth record
+11,Eleventh record
+12,Twelfth record
+13,Thirteenth record
+14,Fourteenth record
+15,Fifteenth record
+16,Sixteenth record
+17,Seventeenth record
+18,Eighteenth record
+19,"A long description wraps at forty display cells even on a wide terminal and preserves its logical content when selected and copied."
+20,"A multiline field:
+its second logical line stays intact when copied."

@@ -1,0 +1,14 @@
+root = true
+
+[*]
+indent_style = tab
+indent_size = 2
+tab_width = 2
+
+[*.md]
+indent_style = space
+indent_size = 2
+
+[*.rs]
+indent_style = space
+indent_size = 4

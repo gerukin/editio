@@ -1,0 +1,5 @@
+Editio plain text
+
+A quiet buffer for everyday notes.
+Unicode: 日本語 · café · 👩‍💻
+Select a word, add another cursor, and edit both.

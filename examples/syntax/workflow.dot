@@ -1,0 +1,7 @@
+digraph workflow {
+    // Directed edges and node attributes.
+    rankdir=LR;
+    open [label="Open file", shape=box];
+    edit [label="Edit"];
+    open -> edit -> save;
+}

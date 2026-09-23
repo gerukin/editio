@@ -1,0 +1,6 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Application_OnStart
+    Application("Name") = "Editio"
+    Application("Count") = 3
+End Sub
+</SCRIPT>

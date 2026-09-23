@@ -1,0 +1,10 @@
+h1. Reader guide
+
+A *bold* idea with _emphasis_ and @inline code@.
+
+* Open a file
+* Edit a line
+
+|_. Mode|_. Purpose|
+|View|Read|
+|Edit|Write|

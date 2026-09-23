@@ -1,0 +1,6 @@
+/ A Haml template
+%section.reader
+  %h1 Hello, reader!
+  %ul
+    - @readers.each do |reader|
+      %li= reader.name

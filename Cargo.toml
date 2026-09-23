@@ -1,0 +1,47 @@
+[package]
+name = "editio"
+version = "0.1.0"
+edition = "2024"
+description = "Terminal editor: a fast, minimal text viewer and editor"
+license = "MIT"
+authors = ["Nicolas Germineau"]
+repository = "https://github.com/gerukin/editio"
+readme = "README.md"
+publish = false
+
+[lib]
+name = "editio"
+
+[dependencies]
+tapp-ui = { path = "../tapp-ui", default-features = false, features = ["editor", "text-search", "mermaid", "diff-engine", "terminal", "terminal-palette"] }
+ratatui = "0.30.2"
+crossterm = "0.29"
+clap = { version = "4", features = ["derive"] }
+arboard = { version = "3", default-features = false, features = ["wayland-data-control"] }
+
+ropey = "1.6"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+crc32fast = "1"
+tempfile = "3"
+ec4rs = { version = "1.2", default-features = false, features = ["track-source"] }
+globset = "0.4"
+ignore = "0.4.33"
+url = "2"
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"
+signal-hook = "0.3"
+
+[dev-dependencies]
+unicode-width = "0.2"
+pulldown-cmark = "0.13"
+merman = { version = "0.7", default-features = false, features = ["ascii"] }
+
+[profile.release]
+lto = "thin"
+strip = true
+
+
+[patch.crates-io]
+crossterm = { path = "../tapp-ui/vendor/crossterm" }

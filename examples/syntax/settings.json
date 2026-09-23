@@ -1,0 +1,7 @@
+{
+  "name": "Editio",
+  "enabled": true,
+  "tabSize": 4,
+  "languages": ["Rust", "JSON"],
+  "optional": null
+}

@@ -1,0 +1,21 @@
+┌────┐     ┌─────┐
+│ UI │     │ API │
+└──┬─┘     └──┬──┘
+┌ alt Document changed ┐
+│  │          │        │
+│  │ Save     │        │
+│  ├─────────►│        │
+│  │          │        │
+│  │ Stored   │        │
+│  │◄┈┈┈┈┈┈┈┈┈┤        │
+├ else Unchanged ──────┤
+│  │          │        │
+│  │ Nothing to save   │
+│  │◄┈┈┈┈┈┈┈┈┈┤        │
+└──────────────────────┘
+┌ opt Notifications enabled ┐
+│  │          │             │
+│  │ Show confirmation      │
+│  │◄─────────┤             │
+└───────────────────────────┘
+   │          │

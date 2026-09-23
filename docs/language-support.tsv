@@ -1,0 +1,1465 @@
+alias	GitHub language	bundled grammar
+1c enterprise	1C Enterprise	Plain Text
+1c-enterprise	1C Enterprise	Plain Text
+2-dimensional array	2-Dimensional Array	Plain Text
+2-dimensional-array	2-Dimensional Array	Plain Text
+4d	4D	Plain Text
+abap	ABAP	Plain Text
+abap cds	ABAP CDS	Plain Text
+abap-cds	ABAP CDS	Plain Text
+abl	OpenEdge ABL	Pascal
+abnf	ABNF	Plain Text
+abuild	Alpine Abuild	Shell-Unix-Generic
+acfm	Adobe Font Metrics	Plain Text
+ackrc	Option List	Plain Text
+aconf	ApacheConf	Apache Conf
+actionscript	ActionScript	ActionScript
+actionscript 3	ActionScript	ActionScript
+actionscript3	ActionScript	ActionScript
+ad block	Adblock Filter List	Plain Text
+ad block filters	Adblock Filter List	Plain Text
+ada	Ada	Ada
+ada2005	Ada	Ada
+ada95	Ada	Ada
+adb	Adblock Filter List	Plain Text
+adblock	Adblock Filter List	Plain Text
+adblock filter list	Adblock Filter List	Plain Text
+adblock-filter-list	Adblock Filter List	Plain Text
+adobe composite font metrics	Adobe Font Metrics	Plain Text
+adobe font metrics	Adobe Font Metrics	Plain Text
+adobe multiple font metrics	Adobe Font Metrics	Plain Text
+adobe-font-metrics	Adobe Font Metrics	Plain Text
+advpl	xBase	Plain Text
+afdko	OpenType Feature File	Plain Text
+agda	Agda	Plain Text
+ags	AGS Script	Bourne Again Shell (bash)
+ags script	AGS Script	Bourne Again Shell (bash)
+ags-script	AGS Script	Bourne Again Shell (bash)
+ahk	AutoHotkey	Plain Text
+aidl	AIDL	Plain Text
+aiken	Aiken	Plain Text
+al	AL	Plain Text
+aleo	Aleo	Plain Text
+algol	ALGOL	Plain Text
+alloy	Alloy	Plain Text
+alpine abuild	Alpine Abuild	Shell-Unix-Generic
+alpine-abuild	Alpine Abuild	Shell-Unix-Generic
+altium	Altium Designer	INI
+altium designer	Altium Designer	INI
+altium-designer	Altium Designer	INI
+amfm	Adobe Font Metrics	Plain Text
+ampl	AMPL	Plain Text
+amusewiki	Muse	Plain Text
+angelscript	AngelScript	ActionScript
+answer set programming	Answer Set Programming	Plain Text
+answer-set-programming	Answer Set Programming	Plain Text
+ant build system	Ant Build System	Plain Text
+ant-build-system	Ant Build System	Plain Text
+antlers	Antlers	Plain Text
+antlr	ANTLR	Plain Text
+apache	ApacheConf	Apache Conf
+apacheconf	ApacheConf	Apache Conf
+apex	Apex	TeX
+api blueprint	API Blueprint	Plain Text
+api-blueprint	API Blueprint	Plain Text
+apkbuild	Alpine Abuild	Shell-Unix-Generic
+apl	APL	Plain Text
+apollo guidance computer	Apollo Guidance Computer	Plain Text
+apollo-guidance-computer	Apollo Guidance Computer	Plain Text
+apples	AppleScript	AppleScript
+applescript	AppleScript	AppleScript
+arc	Arc	Plain Text
+arexx	REXX	Plain Text
+arkts	ArkTS	Plain Text
+as3	ActionScript	ActionScript
+ascii stl	STL	Plain Text
+asciidoc	AsciiDoc	AsciiDoc (Asciidoctor)
+asl	ASL	Plain Text
+asm	Assembly	x86_64 Assembly
+asn.1	ASN.1	Plain Text
+asp	Classic ASP	HTML (ASP)
+asp.net	ASP.NET	HTML (ASP)
+aspectj	AspectJ	Plain Text
+aspx	ASP.NET	HTML (ASP)
+aspx-vb	ASP.NET	HTML (ASP)
+assembly	Assembly	x86_64 Assembly
+astro	Astro	Plain Text
+asymptote	Asymptote	C++
+ats	ATS	Plain Text
+ats2	ATS	Plain Text
+au3	AutoIt	Plain Text
+augeas	Augeas	Plain Text
+autoconf	M4Sugar	Plain Text
+autohotkey	AutoHotkey	Plain Text
+autoit	AutoIt	Plain Text
+autoit3	AutoIt	Plain Text
+autoitscript	AutoIt	Plain Text
+avro idl	Avro IDL	Plain Text
+avro-idl	Avro IDL	Plain Text
+awk	Awk	AWK
+b	B	C
+b (formal method)	B (Formal Method)	Plain Text
+b-(formal-method)	B (Formal Method)	Plain Text
+b3d	BlitzBasic	Plain Text
+b4x	B4X	Plain Text
+ballerina	Ballerina	Plain Text
+baml	BAML	Plain Text
+bash	Shell	Bourne Again Shell (bash)
+bash session	ShellSession	Plain Text
+basic	BASIC	Plain Text
+basic for android	B4X	Plain Text
+bat	Batchfile	Batch File
+batch	Batchfile	Batch File
+batchfile	Batchfile	Batch File
+bazel	Starlark	Python
+bbcode	BBCode	Plain Text
+be	Berry	Plain Text
+beef	Beef	C#
+befunge	Befunge	Plain Text
+berry	Berry	Plain Text
+bh	Bluespec BH	Plain Text
+bibtex	BibTeX	BibTeX
+bibtex style	BibTeX Style	Plain Text
+bibtex-style	BibTeX Style	Plain Text
+bicep	Bicep	Plain Text
+bikeshed	Bikeshed	Plain Text
+bird	BIRD2	Plain Text
+bird2	BIRD2	Plain Text
+bird3	BIRD2	Plain Text
+bison	Bison	Plain Text
+bitbake	BitBake	x86_64 Assembly
+blade	Blade	Plain Text
+blitz3d	BlitzBasic	Plain Text
+blitzbasic	BlitzBasic	Plain Text
+blitzmax	BlitzMax	Plain Text
+blitzplus	BlitzBasic	Plain Text
+blp	Blueprint	Plain Text
+blueprint	Blueprint	Plain Text
+bluespec	Bluespec	Plain Text
+bluespec bh	Bluespec BH	Plain Text
+bluespec bsv	Bluespec	Plain Text
+bluespec classic	Bluespec BH	Plain Text
+bluespec-bh	Bluespec BH	Plain Text
+bmax	BlitzMax	Plain Text
+boo	Boo	Plain Text
+boogie	Boogie	Plain Text
+bplus	BlitzBasic	Plain Text
+bqn	BQN	Plain Text
+brainfuck	Brainfuck	Plain Text
+brighterscript	BrighterScript	Plain Text
+brightscript	Brightscript	Plain Text
+bro	Zeek	Plain Text
+browserslist	Browserslist	Plain Text
+bru	Bru	Plain Text
+bsdmake	Makefile	Makefile
+bsv	Bluespec	Plain Text
+buildstream	BuildStream	YAML
+byond	DM	Plain Text
+bzl	Starlark	Python
+c	C	C
+c#	C#	C#
+c++	C++	C++
+c++-objdump	Cpp-ObjDump	Plain Text
+c-objdump	C-ObjDump	Plain Text
+c2hs	C2hs Haskell	Haskell
+c2hs haskell	C2hs Haskell	Haskell
+c2hs-haskell	C2hs Haskell	Haskell
+c3	C3	Plain Text
+cabal	Cabal Config	Cabal
+cabal config	Cabal Config	Cabal
+cabal-config	Cabal Config	Cabal
+caddy	Caddyfile	Plain Text
+caddyfile	Caddyfile	Plain Text
+cadence	Cadence	Plain Text
+cairo	Cairo	Plain Text
+cairo zero	Cairo Zero	Plain Text
+cairo-zero	Cairo Zero	Plain Text
+cake	C#	C#
+cakescript	C#	C#
+cameligo	CameLIGO	Plain Text
+cangjie	Cangjie	Plain Text
+cap cds	CAP CDS	Plain Text
+cap'n proto	Cap'n Proto	Plain Text
+cap'n-proto	Cap'n Proto	Plain Text
+cap-cds	CAP CDS	Plain Text
+carbon	Carbon	Plain Text
+carto	CartoCSS	Plain Text
+cartocss	CartoCSS	Plain Text
+cask	Emacs Lisp	Lisp
+cds	CAP CDS	Plain Text
+ceylon	Ceylon	Plain Text
+cfc	ColdFusion CFC	CFML
+cfm	ColdFusion	CFML
+cfml	ColdFusion	CFML
+chapel	Chapel	Plain Text
+charity	Charity	Plain Text
+checksum	Checksums	Plain Text
+checksums	Checksums	Plain Text
+chpl	Chapel	Plain Text
+chuck	ChucK	Java
+cil	CIL	Plain Text
+circom	Circom	Plain Text
+cirru	Cirru	Plain Text
+clarion	Clarion	Plain Text
+clarity	Clarity	Plain Text
+classic asp	Classic ASP	HTML (ASP)
+classic qbasic	QuickBASIC	Plain Text
+classic quickbasic	QuickBASIC	Plain Text
+classic visual basic	Visual Basic 6.0	TeX
+classic-asp	Classic ASP	HTML (ASP)
+clean	Clean	Plain Text
+click	Click	Plain Text
+clipper	xBase	Plain Text
+clips	CLIPS	Plain Text
+clojure	Clojure	Clojure
+closure templates	Closure Templates	Plain Text
+closure-templates	Closure Templates	Plain Text
+cloud firestore security rules	Cloud Firestore Security Rules	Plain Text
+cloud-firestore-security-rules	Cloud Firestore Security Rules	Plain Text
+clue	Clue	Plain Text
+cmake	CMake	CMake
+cobol	COBOL	Python
+coccinelle	SmPL	Plain Text
+codeowners	CODEOWNERS	Plain Text
+codeql	CodeQL	Plain Text
+coffee	CoffeeScript	CoffeeScript
+coffee-script	CoffeeScript	CoffeeScript
+coffeescript	CoffeeScript	CoffeeScript
+coldfusion	ColdFusion	CFML
+coldfusion cfc	ColdFusion CFC	CFML
+coldfusion html	ColdFusion	CFML
+coldfusion-cfc	ColdFusion CFC	CFML
+collada	COLLADA	XML
+commit	Git Commit	Git Commit
+common lisp	Common Lisp	Lisp
+common workflow language	Common Workflow Language	Plain Text
+common-lisp	Common Lisp	Lisp
+common-workflow-language	Common Workflow Language	Plain Text
+component pascal	Component Pascal	C++
+component-pascal	Component Pascal	C++
+conf	INI	INI
+conll	CoNLL-U	Plain Text
+conll-u	CoNLL-U	Plain Text
+conll-x	CoNLL-U	Plain Text
+console	ShellSession	Plain Text
+containerfile	Dockerfile	Dockerfile
+cooklang	Cooklang	Plain Text
+cool	Cool	Lisp
+coq	Rocq Prover	Verilog
+cperl	Perl	Perl
+cpp	C++	C++
+cpp-objdump	Cpp-ObjDump	Plain Text
+cql	CQL	Plain Text
+creole	Creole	Plain Text
+cron	crontab	Plain Text
+cron table	crontab	Plain Text
+crontab	crontab	Plain Text
+crystal	Crystal	Crystal
+csharp	C#	C#
+cson	CSON	CoffeeScript
+csound	Csound	Plain Text
+csound document	Csound Document	Plain Text
+csound score	Csound Score	Plain Text
+csound-csd	Csound Document	Plain Text
+csound-document	Csound Document	Plain Text
+csound-orc	Csound	Plain Text
+csound-sco	Csound Score	Plain Text
+csound-score	Csound Score	Plain Text
+css	CSS	CSS
+csv	CSV	Separated Values
+cucumber	Gherkin	Plain Text
+cuda	Cuda	Plain Text
+cue	CUE	Plain Text
+cue sheet	Cue Sheet	Plain Text
+cue-sheet	Cue Sheet	Plain Text
+curl config	cURL Config	Plain Text
+curl-config	cURL Config	Plain Text
+curlrc	cURL Config	Plain Text
+curry	Curry	Plain Text
+cweb	CWeb	Plain Text
+cwl	Common Workflow Language	Plain Text
+cycript	Cycript	JavaScript
+cylc	Cylc	Plain Text
+cypher	Cypher	Plain Text
+cython	Cython	Python
+d	D	D
+d-objdump	D-ObjDump	Plain Text
+d2	D2	Plain Text
+d2lang	D2	Plain Text
+dafny	Dafny	Plain Text
+darcs patch	Darcs Patch	Plain Text
+darcs-patch	Darcs Patch	Plain Text
+dart	Dart	Dart
+daslang	Daslang	Plain Text
+dataweave	DataWeave	Plain Text
+dcl	DIGITAL Command Language	Plain Text
+debian package control file	Debian Package Control File	Plain Text
+debian-package-control-file	Debian Package Control File	Plain Text
+delphi	Pascal	Pascal
+denizenscript	DenizenScript	Plain Text
+desktop	desktop	INI
+dhall	Dhall	Haskell
+diff	Diff	Diff
+digital command language	DIGITAL Command Language	Plain Text
+digital-command-language	DIGITAL Command Language	Plain Text
+dircolors	dircolors	Plain Text
+directx 3d file	DirectX 3D File	Plain Text
+directx-3d-file	DirectX 3D File	Plain Text
+django	Jinja	Jinja2
+dlang	D	D
+dm	DM	Plain Text
+dns zone	DNS Zone	Plain Text
+dns-zone	DNS Zone	Plain Text
+dockerfile	Dockerfile	Dockerfile
+dogescript	Dogescript	Plain Text
+dosbatch	Batchfile	Batch File
+dosini	INI	INI
+dotenv	Dotenv	DotENV
+dpatch	Darcs Patch	Plain Text
+dtrace	DTrace	D
+dtrace-script	DTrace	D
+dune	Dune	Plain Text
+dylan	Dylan	Plain Text
+e	E	Plain Text
+e-mail	E-mail	Email
+eagle	Eagle	XML
+earthfile	Earthly	Plain Text
+earthly	Earthly	Plain Text
+eask	Emacs Lisp	Lisp
+easybuild	Easybuild	Python
+ebnf	EBNF	Plain Text
+ec	eC	Plain Text
+ecere projects	Ecere Projects	JSON
+ecere-projects	Ecere Projects	JSON
+ecl	ECL	Plain Text
+eclipse	ECLiPSe	Plain Text
+ecmarkdown	Ecmarkup	HTML
+ecmarkup	Ecmarkup	HTML
+ecr	HTML+ECR	Plain Text
+edge	Edge	Plain Text
+edgeql	EdgeQL	Plain Text
+editor-config	EditorConfig	Plain Text
+editorconfig	EditorConfig	Plain Text
+edje data collection	Edje Data Collection	C++
+edje-data-collection	Edje Data Collection	C++
+edn	edn	Clojure
+eeschema schematic	KiCad Schematic	Plain Text
+eex	HTML+EEX	HTML (EEx)
+eiffel	Eiffel	Plain Text
+ejs	EJS	Plain Text
+electronic business card	vCard	Plain Text
+elisp	Emacs Lisp	Lisp
+elixir	Elixir	Elixir
+elm	Elm	Elm
+elvish	Elvish	Plain Text
+elvish transcript	Elvish Transcript	Plain Text
+elvish-transcript	Elvish Transcript	Plain Text
+emacs	Emacs Lisp	Lisp
+emacs lisp	Emacs Lisp	Lisp
+emacs muse	Muse	Plain Text
+emacs-lisp	Emacs Lisp	Lisp
+email	E-mail	Email
+emberscript	EmberScript	CoffeeScript
+eml	E-mail	Email
+envrc	Shell	Bourne Again Shell (bash)
+eq	EQ	C#
+erb	HTML+ERB	HTML (Rails)
+erlang	Erlang	Erlang
+esdl	EdgeQL	Plain Text
+euphoria	Euphoria	Elixir
+f#	F#	F#
+f*	F*	Plain Text
+factor	Factor	Plain Text
+fancy	Fancy	Plain Text
+fantom	Fantom	Plain Text
+faust	Faust	Plain Text
+fb	FreeBASIC	Plain Text
+fennel	Fennel	Plain Text
+figfont	FIGlet Font	Plain Text
+figlet font	FIGlet Font	Plain Text
+figlet-font	FIGlet Font	Plain Text
+filebench wml	Filebench WML	Fortran (Fixed Form)
+filebench-wml	Filebench WML	Fortran (Fixed Form)
+filterscript	Filterscript	GLSL
+firrtl	FIRRTL	Plain Text
+fish	fish	Fish
+flatbuffers	FlatBuffers	Plain Text
+flex	Lex	Lisp
+flix	Flix	Plain Text
+fluent	Fluent	Plain Text
+flux	FLUX	Plain Text
+formatted	Formatted	Fortran (Fixed Form)
+forth	Forth	Fortran (Fixed Form)
+fortran	Fortran	Fortran (Fixed Form)
+fortran free form	Fortran Free Form	Fortran (Modern)
+fortran-free-form	Fortran Free Form	Fortran (Modern)
+foxpro	xBase	Plain Text
+fpp	FPP	Fortran (Fixed Form)
+freebasic	FreeBASIC	Plain Text
+freemarker	FreeMarker	Plain Text
+frege	Frege	Haskell
+fsharp	F#	F#
+fstar	F*	Plain Text
+ftl	FreeMarker	Plain Text
+fundamental	Text	Plain Text
+futhark	Futhark	Plain Text
+g-code	G-code	Plain Text
+game maker language	Game Maker Language	C++
+game-maker-language	Game Maker Language	C++
+gaml	GAML	Plain Text
+gams	GAMS	Plain Text
+gap	GAP	GDScript (Godot Engine)
+gas	Unix Assembly	ARM Assembly
+gcc machine description	GCC Machine Description	Markdown
+gcc-machine-description	GCC Machine Description	Markdown
+gdb	GDB	Plain Text
+gdscript	GDScript	GDScript (Godot Engine)
+gdshader	GDShader	Plain Text
+gedcom	GEDCOM	Plain Text
+gemfile.lock	Gemfile.lock	Plain Text
+gemini	Gemini	Plain Text
+gemtext	Gemini	Plain Text
+genero 4gl	Genero 4gl	Plain Text
+genero per	Genero per	Plain Text
+genero-4gl	Genero 4gl	Plain Text
+genero-per	Genero per	Plain Text
+genie	Genie	GLSL
+genshi	Genshi	Plain Text
+gentoo ebuild	Gentoo Ebuild	Bourne Again Shell (bash)
+gentoo eclass	Gentoo Eclass	Bourne Again Shell (bash)
+gentoo-ebuild	Gentoo Ebuild	Bourne Again Shell (bash)
+gentoo-eclass	Gentoo Eclass	Bourne Again Shell (bash)
+geojson	JSON	JSON
+gerber image	Gerber Image	Solidity
+gerber-image	Gerber Image	Solidity
+gettext catalog	Gettext Catalog	Plain Text
+gettext-catalog	Gettext Catalog	Plain Text
+gf	Grammatical Framework	Plain Text
+gherkin	Gherkin	Plain Text
+git attributes	Git Attributes	Git Attributes
+git blame ignore revs	Git Revision List	Plain Text
+git commit	Git Commit	Git Commit
+git config	Git Config	Git Config
+git revision list	Git Revision List	Plain Text
+git-attributes	Git Attributes	Git Attributes
+git-commit	Git Commit	Git Commit
+git-config	Git Config	Git Config
+git-ignore	Ignore List	Git Ignore
+git-revision-list	Git Revision List	Plain Text
+gitattributes	Git Attributes	Git Attributes
+gitconfig	Git Config	Git Config
+gitignore	Ignore List	Git Ignore
+gitmodules	Git Config	Git Config
+gjs	Glimmer JS	Plain Text
+gleam	Gleam	Plain Text
+glimmer js	Glimmer JS	Plain Text
+glimmer ts	Glimmer TS	Plain Text
+glimmer-js	Glimmer JS	Plain Text
+glimmer-ts	Glimmer TS	Plain Text
+glsl	GLSL	GLSL
+glyph	Glyph	Tcl
+glyph bitmap distribution format	Glyph Bitmap Distribution Format	Plain Text
+glyph-bitmap-distribution-format	Glyph Bitmap Distribution Format	Plain Text
+gn	GN	Plain Text
+gno	Gno	Plain Text
+gnolang	Gno	Plain Text
+gnu asm	Unix Assembly	ARM Assembly
+gnuplot	Gnuplot	gnuplot
+go	Go	Go
+go checksums	Go Checksums	Plain Text
+go mod	Go Module	Plain Text
+go module	Go Module	Plain Text
+go sum	Go Checksums	Plain Text
+go template	Go Template	Plain Text
+go work	Go Workspace	Plain Text
+go work sum	Go Checksums	Plain Text
+go workspace	Go Workspace	Plain Text
+go-checksums	Go Checksums	Plain Text
+go-module	Go Module	Plain Text
+go-template	Go Template	Plain Text
+go-workspace	Go Workspace	Plain Text
+go.mod	Go Module	Plain Text
+go.sum	Go Checksums	Plain Text
+go.work	Go Workspace	Plain Text
+go.work.sum	Go Checksums	Plain Text
+godot resource	Godot Resource	Plain Text
+godot-resource	Godot Resource	Plain Text
+golang	Go	Go
+golo	Golo	Plain Text
+gosu	Gosu	GLSL
+gotmpl	Go Template	Plain Text
+grace	Grace	Plain Text
+gradle	Gradle	Groovy
+gradle kotlin dsl	Gradle Kotlin DSL	Plain Text
+gradle-kotlin-dsl	Gradle Kotlin DSL	Plain Text
+grammatical framework	Grammatical Framework	Plain Text
+grammatical-framework	Grammatical Framework	Plain Text
+graph modeling language	Graph Modeling Language	Plain Text
+graph-modeling-language	Graph Modeling Language	Plain Text
+graphql	GraphQL	GraphQL
+graphviz (dot)	Graphviz (DOT)	Graphviz (DOT)
+graphviz-(dot)	Graphviz (DOT)	Graphviz (DOT)
+groff	Roff	Groff/troff
+groovy	Groovy	Groovy
+groovy server pages	Groovy Server Pages	Java Server Page (JSP)
+groovy-server-pages	Groovy Server Pages	Java Server Page (JSP)
+gsc	GSC	GLSL
+gsp	Groovy Server Pages	Java Server Page (JSP)
+gtk	GtkRC	Plain Text
+gtk 1	GtkRC	Plain Text
+gtk 2	GtkRC	Plain Text
+gtkrc	GtkRC	Plain Text
+gts	Glimmer TS	Plain Text
+hack	Hack	C++
+haml	Haml	Ruby Haml
+handlebars	Handlebars	Plain Text
+haproxy	HAProxy	INI
+harbour	Harbour	Plain Text
+hare	Hare	Plain Text
+hash	Checksums	Plain Text
+hashes	Checksums	Plain Text
+hashicorp configuration language	HCL	Terraform
+haskell	Haskell	Haskell
+haxe	Haxe	Plain Text
+hbs	Handlebars	Plain Text
+hcl	HCL	Terraform
+heex	HTML+EEX	HTML (EEx)
+help	Vim Help File	Plain Text
+hip	HIP	C++
+hiveql	HiveQL	Plain Text
+hls playlist	M3U	Plain Text
+hlsl	HLSL	Plain Text
+hocon	HOCON	Plain Text
+holyc	HolyC	Plain Text
+hoon	hoon	Plain Text
+hosts	Hosts File	Hosts File
+hosts file	Hosts File	Hosts File
+hosts-file	Hosts File	Hosts File
+html	HTML	HTML
+html+django	Jinja	Jinja2
+html+ecr	HTML+ECR	Plain Text
+html+eex	HTML+EEX	HTML (EEx)
+html+erb	HTML+ERB	HTML (Rails)
+html+jinja	Jinja	Jinja2
+html+php	HTML+PHP	PHP
+html+razor	HTML+Razor	Plain Text
+html+ruby	HTML+ERB	HTML (Rails)
+htmlbars	Handlebars	Plain Text
+htmldjango	Jinja	Jinja2
+http	HTTP	HTTP Request and Response
+hurl	Hurl	Plain Text
+hxml	HXML	Plain Text
+hy	Hy	Plain Text
+hylang	Hy	Plain Text
+hyphy	HyPhy	Plain Text
+i7	Inform 7	Plain Text
+ical	iCalendar	Plain Text
+icalendar	iCalendar	Plain Text
+idl	IDL	Plain Text
+idris	Idris	Idris
+ignore	Ignore List	Git Ignore
+ignore list	Ignore List	Git Ignore
+ignore-list	Ignore List	Git Ignore
+igor	IGOR Pro	Plain Text
+igor pro	IGOR Pro	Plain Text
+igor-pro	IGOR Pro	Plain Text
+igorpro	IGOR Pro	Plain Text
+ijm	ImageJ Macro	Plain Text
+il assembly	IL Assembly	Plain Text
+il-assembly	IL Assembly	Plain Text
+ilasm	IL Assembly	Plain Text
+ile rpg	RPGLE	Plain Text
+imagej macro	ImageJ Macro	Plain Text
+imagej-macro	ImageJ Macro	Plain Text
+imba	Imba	Plain Text
+imhex	ImHex Pattern Language	Plain Text
+imhex pattern language	ImHex Pattern Language	Plain Text
+imhex-pattern-language	ImHex Pattern Language	Plain Text
+imhexpatternlanguage	ImHex Pattern Language	Plain Text
+imhexpl	ImHex Pattern Language	Plain Text
+inc	PHP	PHP
+inform 7	Inform 7	Plain Text
+inform-7	Inform 7	Plain Text
+inform7	Inform 7	Plain Text
+ini	INI	INI
+ink	Ink	Plain Text
+inno setup	Inno Setup	Plain Text
+inno-setup	Inno Setup	Plain Text
+inputrc	Readline Config	Plain Text
+io	Io	Plain Text
+ioke	Ioke	Plain Text
+ipython notebook	Jupyter Notebook	JSON
+irc	IRC log	Plain Text
+irc log	IRC log	Plain Text
+irc logs	IRC log	Plain Text
+irc-log	IRC log	Plain Text
+isabelle	Isabelle	Plain Text
+isabelle root	Isabelle ROOT	Plain Text
+isabelle-root	Isabelle ROOT	Plain Text
+ispc	ISPC	Plain Text
+j	J	Plain Text
+jac	Jac	Plain Text
+jai	Jai	Plain Text
+janet	Janet	Plain Text
+jar manifest	JAR Manifest	YAML
+jar-manifest	JAR Manifest	YAML
+jasmin	Jasmin	Plain Text
+jass	JASS	Plain Text
+jass2	JASS	Plain Text
+java	Java	Java
+java properties	Java Properties	Java Properties
+java server page	Groovy Server Pages	Java Server Page (JSP)
+java server pages	Java Server Pages	Java Server Page (JSP)
+java template engine	Java Template Engine	Plain Text
+java-properties	Java Properties	Java Properties
+java-server-pages	Java Server Pages	Java Server Page (JSP)
+java-template-engine	Java Template Engine	Plain Text
+javascript	JavaScript	JavaScript
+javascript+erb	JavaScript+ERB	JavaScript (Rails)
+jcl	JCL	Plain Text
+jest snapshot	Jest Snapshot	Plain Text
+jest-snapshot	Jest Snapshot	Plain Text
+jetbrains mps	JetBrains MPS	Plain Text
+jetbrains-mps	JetBrains MPS	Plain Text
+jflex	JFlex	Plain Text
+jinja	Jinja	Jinja2
+jison	Jison	Plain Text
+jison lex	Jison Lex	Plain Text
+jison-lex	Jison Lex	Plain Text
+jolie	Jolie	Plain Text
+jq	jq	JQ
+jruby	Ruby	Ruby
+js	JavaScript	JavaScript
+json	JSON	JSON
+json with comments	JSON with Comments	JSON
+json-with-comments	JSON with Comments	JSON
+json5	JSON5	JavaScript
+jsonc	JSON with Comments	JSON
+jsoniq	JSONiq	JQ
+jsonl	JSON	JSON
+jsonld	JSONLD	JavaScript
+jsonnet	Jsonnet	jsonnet
+jsp	Java Server Pages	Java Server Page (JSP)
+jte	Java Template Engine	Plain Text
+julia	Julia	Julia
+julia repl	Julia REPL	Plain Text
+julia-repl	Julia REPL	Plain Text
+jupyter notebook	Jupyter Notebook	JSON
+jupyter-notebook	Jupyter Notebook	JSON
+just	Just	Plain Text
+justfile	Just	Plain Text
+kaitai struct	Kaitai Struct	YAML
+kaitai-struct	Kaitai Struct	YAML
+kak	KakouneScript	Plain Text
+kakounescript	KakouneScript	Plain Text
+kakscript	KakouneScript	Plain Text
+kcl	KCL	Plain Text
+kdl	KDL	Plain Text
+kerboscript	KerboScript	Plain Text
+keyvalues	Valve Data Format	Plain Text
+kframework	KFramework	Plain Text
+kicad layout	KiCad Layout	Plain Text
+kicad legacy layout	KiCad Legacy Layout	Plain Text
+kicad schematic	KiCad Schematic	Plain Text
+kicad-layout	KiCad Layout	Plain Text
+kicad-legacy-layout	KiCad Legacy Layout	Plain Text
+kicad-schematic	KiCad Schematic	Plain Text
+kickstart	Kickstart	Plain Text
+kit	Kit	HTML
+koka	Koka	Plain Text
+kolmafia ash	KoLmafia ASH	Bourne Again Shell (bash)
+kolmafia-ash	KoLmafia ASH	Bourne Again Shell (bash)
+kotlin	Kotlin	Kotlin
+krl	KRL	Plain Text
+ksy	Kaitai Struct	YAML
+kusto	Kusto	Plain Text
+kvlang	kvlang	Plain Text
+labview	LabVIEW	XML
+lambdapi	Lambdapi	Plain Text
+langium	Langium	Plain Text
+lark	Lark	Plain Text
+lasso	Lasso	Plain Text
+lassoscript	Lasso	Plain Text
+latex	TeX	TeX
+latte	Latte	Plain Text
+lean	Lean	Lean 4
+lean 4	Lean 4	Lean 4
+lean-4	Lean 4	Lean 4
+lean4	Lean 4	Lean 4
+leex	HTML+EEX	HTML (EEx)
+leo	Leo	Plain Text
+less	Less	Less
+less-css	Less	Less
+lex	Lex	Lisp
+lfe	LFE	Lisp
+lhaskell	Literate Haskell	Literate Haskell
+lhs	Literate Haskell	Literate Haskell
+ligolang	LigoLANG	Plain Text
+lilypond	LilyPond	Plain Text
+limbo	Limbo	Objective-C
+linear programming	Linear Programming	Plain Text
+linear-programming	Linear Programming	Plain Text
+linker script	Linker Script	Plain Text
+linker-script	Linker Script	Plain Text
+linux kernel module	Linux Kernel Module	Plain Text
+linux-kernel-module	Linux Kernel Module	Plain Text
+liquid	Liquid	Plain Text
+liquidsoap	Liquidsoap	Plain Text
+lisp	Common Lisp	Lisp
+litcoffee	Literate CoffeeScript	Plain Text
+literate agda	Literate Agda	Plain Text
+literate coffeescript	Literate CoffeeScript	Plain Text
+literate haskell	Literate Haskell	Literate Haskell
+literate-agda	Literate Agda	Plain Text
+literate-coffeescript	Literate CoffeeScript	Plain Text
+literate-haskell	Literate Haskell	Literate Haskell
+live-script	LiveScript	LiveScript
+livecode script	LiveCode Script	Plain Text
+livecode-script	LiveCode Script	Plain Text
+livescript	LiveScript	LiveScript
+llvm	LLVM	LLVM
+llvm tablegen	LLVM TableGen	Plain Text
+llvm-tablegen	LLVM TableGen	Plain Text
+lobster	Lobster	Plain Text
+logos	Logos	Plain Text
+logtalk	Logtalk	Plain Text
+lolcode	LOLCODE	Plain Text
+lookml	LookML	YAML
+loomscript	LoomScript	LiveScript
+ls	LiveScript	LiveScript
+lsl	LSL	Plain Text
+ltspice symbol	LTspice Symbol	Plain Text
+ltspice-symbol	LTspice Symbol	Plain Text
+lua	Lua	Lua
+luau	Luau	Plain Text
+m	M	Objective-C
+m2	Macaulay2	Plain Text
+m3u	M3U	Plain Text
+m3u playlist	M3U	Plain Text
+m4	M4	Plain Text
+m4sugar	M4Sugar	Plain Text
+m68k	Motorola 68K Assembly	x86_64 Assembly
+macaulay2	Macaulay2	Plain Text
+macruby	Ruby	Ruby
+mail	E-mail	Email
+make	Makefile	Makefile
+makefile	Makefile	Makefile
+mako	Mako	Plain Text
+man	Roff	Groff/troff
+man page	Roff	Groff/troff
+man-page	Roff	Groff/troff
+manpage	Roff	Groff/troff
+markdown	Markdown	Markdown
+marko	Marko	Plain Text
+markojs	Marko	Plain Text
+mask	Mask	Plain Text
+mathematica	Wolfram Language	Objective-C
+mathematical programming system	Mathematical Programming System	Plain Text
+mathematical-programming-system	Mathematical Programming System	Plain Text
+matlab	MATLAB	MATLAB
+maven pom	Maven POM	Plain Text
+maven-pom	Maven POM	Plain Text
+max	Max	JSON
+max/msp	Max	JSON
+maxmsp	Max	JSON
+maxscript	MAXScript	Plain Text
+mbox	E-mail	Email
+mcfunction	mcfunction	Plain Text
+md	Markdown	Markdown
+mdoc	Roff	Groff/troff
+mdsvex	mdsvex	Plain Text
+mdx	MDX	Plain Text
+mediawiki	Wikitext	MediaWiki
+mercury	Mercury	Objective-C
+mermaid	Mermaid	Plain Text
+mermaid example	Mermaid	Plain Text
+meson	Meson	Plain Text
+metal	Metal	C++
+metta	MeTTa	Plain Text
+mf	Makefile	Makefile
+microsoft developer studio project	Microsoft Developer Studio Project	Plain Text
+microsoft visual studio solution	Microsoft Visual Studio Solution	Plain Text
+microsoft-developer-studio-project	Microsoft Developer Studio Project	Plain Text
+microsoft-visual-studio-solution	Microsoft Visual Studio Solution	Plain Text
+minid	MiniD	Plain Text
+miniscript	MiniScript	Plain Text
+miniyaml	MiniYAML	YAML
+minizinc	MiniZinc	Plain Text
+minizinc data	MiniZinc Data	Plain Text
+minizinc-data	MiniZinc Data	Plain Text
+mint	Mint	Plain Text
+mirah	Mirah	Ruby
+mirc script	mIRC Script	Plain Text
+mirc-script	mIRC Script	Plain Text
+mlir	MLIR	Plain Text
+mma	Wolfram Language	Objective-C
+modelica	Modelica	Plain Text
+modula-2	Modula-2	Plain Text
+modula-3	Modula-3	Plain Text
+module management system	Module Management System	Plain Text
+module-management-system	Module Management System	Plain Text
+mojo	Mojo	Plain Text
+monkey	Monkey	Plain Text
+monkey c	Monkey C	Plain Text
+monkey-c	Monkey C	Plain Text
+moocode	Moocode	Plain Text
+moonbit	MoonBit	Plain Text
+moonscript	MoonScript	Plain Text
+motoko	Motoko	Plain Text
+motorola 68k assembly	Motorola 68K Assembly	x86_64 Assembly
+motorola-68k-assembly	Motorola 68K Assembly	x86_64 Assembly
+move	Move	Plain Text
+mps	JetBrains MPS	Plain Text
+mql4	MQL4	Plain Text
+mql5	MQL5	Plain Text
+msil	IL Assembly	Plain Text
+mtml	MTML	HTML
+muf	MUF	Objective-C
+mumps	M	Objective-C
+mupad	mupad	Plain Text
+muse	Muse	Plain Text
+mustache	Mustache	Plain Text
+myghty	Myghty	Plain Text
+nanorc	nanorc	Plain Text
+nargo	Noir	Plain Text
+nasal	Nasal	Plain Text
+nasl	NASL	x86_64 Assembly
+nasm	Assembly	x86_64 Assembly
+ncl	NCL	Plain Text
+ne-on	NEON	Plain Text
+nearley	Nearley	Plain Text
+nemerle	Nemerle	Plain Text
+neon	NEON	Plain Text
+neosnippet	Vim Snippet	Plain Text
+nesc	nesC	Plain Text
+netlinx	NetLinx	Plain Text
+netlinx+erb	NetLinx+ERB	Plain Text
+netlogo	NetLogo	Lisp
+nette object notation	NEON	Plain Text
+newlisp	NewLisp	Lisp
+nextflow	Nextflow	Plain Text
+nginx	Nginx	nginx
+nginx configuration file	Nginx	nginx
+nickel	Nickel	Plain Text
+nim	Nim	Nim
+ninja	Ninja	Ninja
+nit	Nit	Plain Text
+nix	Nix	Nix
+nixos	Nix	Nix
+njk	Nunjucks	Plain Text
+nl	NL	Plain Text
+nmodl	NMODL	Plain Text
+node	JavaScript	JavaScript
+noir	Noir	Plain Text
+npm config	NPM Config	Plain Text
+npm-config	NPM Config	Plain Text
+npmrc	NPM Config	Plain Text
+nroff	Roff	Groff/troff
+nsis	NSIS	NSIS
+nu	Nu	Plain Text
+nu-script	Nushell	Plain Text
+numpy	NumPy	Plain Text
+nunjucks	Nunjucks	Plain Text
+nush	Nu	Plain Text
+nushell	Nushell	Plain Text
+nushell-script	Nushell	Plain Text
+nvim	Vim script	VimL
+nwscript	NWScript	Plain Text
+oasv2	OpenAPI Specification v2	Plain Text
+oasv2-json	OASv2-json	JSON
+oasv2-yaml	OASv2-yaml	YAML
+oasv3	OpenAPI Specification v3	Plain Text
+oasv3-json	OASv3-json	JSON
+oasv3-yaml	OASv3-yaml	YAML
+oberon	Oberon	Plain Text
+obj-c	Objective-C	Objective-C
+obj-c++	Objective-C++	Objective-C++
+obj-j	Objective-J	Plain Text
+objc	Objective-C	Objective-C
+objc++	Objective-C++	Objective-C++
+objdump	ObjDump	Plain Text
+object data instance notation	Object Data Instance Notation	Odin
+object-data-instance-notation	Object Data Instance Notation	Odin
+objective-c	Objective-C	Objective-C
+objective-c++	Objective-C++	Objective-C++
+objective-j	Objective-J	Plain Text
+objectivec	Objective-C	Objective-C
+objectivec++	Objective-C++	Objective-C++
+objectivej	Objective-J	Plain Text
+objectpascal	Pascal	Pascal
+objectscript	ObjectScript	TeX
+objj	Objective-J	Plain Text
+ocaml	OCaml	OCaml
+octave	MATLAB	MATLAB
+odin	Odin	Odin
+odin-lang	Odin	Odin
+odinlang	Odin	Odin
+omgrofl	Omgrofl	Plain Text
+omnet++ msg	OMNeT++ MSG	Email
+omnet++ ned	OMNeT++ NED	Plain Text
+omnet++-msg	OMNeT++ MSG	Email
+omnet++-ned	OMNeT++ NED	Plain Text
+omnetpp-msg	OMNeT++ MSG	Email
+omnetpp-ned	OMNeT++ NED	Plain Text
+oncrpc	RPC	C
+ooc	ooc	Plain Text
+opa	Opa	Plain Text
+opal	Opal	Plain Text
+open policy agent	Open Policy Agent	Rego
+open-policy-agent	Open Policy Agent	Rego
+openapi specification v2	OpenAPI Specification v2	Plain Text
+openapi specification v3	OpenAPI Specification v3	Plain Text
+openapi-specification-v2	OpenAPI Specification v2	Plain Text
+openapi-specification-v3	OpenAPI Specification v3	Plain Text
+opencl	OpenCL	Lisp
+openedge	OpenEdge ABL	Pascal
+openedge abl	OpenEdge ABL	Pascal
+openedge-abl	OpenEdge ABL	Pascal
+openqasm	OpenQASM	Plain Text
+openrc	OpenRC runscript	Shell-Unix-Generic
+openrc runscript	OpenRC runscript	Shell-Unix-Generic
+openrc-runscript	OpenRC runscript	Shell-Unix-Generic
+openscad	OpenSCAD	Plain Text
+openstep property list	OpenStep Property List	Plain Text
+openstep-property-list	OpenStep Property List	Plain Text
+opentofu	HCL	Terraform
+opentype feature file	OpenType Feature File	Plain Text
+opentype-feature-file	OpenType Feature File	Plain Text
+option list	Option List	Plain Text
+option-list	Option List	Plain Text
+opts	Option List	Plain Text
+opy	OverPy	Plain Text
+org	Org	orgmode
+osascript	AppleScript	AppleScript
+overpassql	OverpassQL	Plain Text
+overpy	OverPy	Plain Text
+ox	Ox	Plain Text
+oxygene	Oxygene	Plain Text
+oz	Oz	Plain Text
+p4	P4	Plain Text
+pact	Pact	Plain Text
+pan	Pan	Plain Text
+pandoc	Markdown	Markdown
+papyrus	Papyrus	Plain Text
+parrot	Parrot	Plain Text
+parrot assembly	Parrot Assembly	Plain Text
+parrot internal representation	Parrot Internal Representation	Plain Text
+parrot-assembly	Parrot Assembly	Plain Text
+parrot-internal-representation	Parrot Internal Representation	Plain Text
+pascal	Pascal	Pascal
+pasm	Parrot Assembly	Plain Text
+pawn	Pawn	x86_64 Assembly
+pcbnew	KiCad Layout	Plain Text
+pddl	PDDL	Plain Text
+peg.js	PEG.js	Plain Text
+pep8	Pep8	Plain Text
+perl	Perl	Perl
+perl-6	Raku	Perl
+perl6	Raku	Perl
+php	PHP	PHP
+pic	Pic	Plain Text
+pickle	Pickle	Plain Text
+picolisp	PicoLisp	Lisp
+piglatin	PigLatin	Plain Text
+pikchr	Pic	Plain Text
+pike	Pike	Plain Text
+pip requirements	Pip Requirements	Plain Text
+pip-requirements	Pip Requirements	Plain Text
+pir	Parrot Internal Representation	Plain Text
+pkg-config	pkg-config	Perl
+pkgconf	pkg-config	Perl
+pkl	Pkl	Plain Text
+plain text	Text	Plain Text
+plantuml	PlantUML	Plain Text
+plpgsql	PLpgSQL	SQL
+plsql	PLSQL	SQL
+pod	Pod	Perl
+pod 6	Pod 6	Perl
+pod-6	Pod 6	Perl
+pogoscript	PogoScript	Plain Text
+polar	Polar	Plain Text
+pony	Pony	Plain Text
+portugol	Portugol	Plain Text
+posh	PowerShell	PowerShell
+postcss	PostCSS	Plain Text
+postscr	PostScript	Plain Text
+postscript	PostScript	Plain Text
+pot	Gettext Catalog	Plain Text
+pov-ray	POV-Ray SDL	x86_64 Assembly
+pov-ray sdl	POV-Ray SDL	x86_64 Assembly
+pov-ray-sdl	POV-Ray SDL	x86_64 Assembly
+povray	POV-Ray SDL	x86_64 Assembly
+power query	Power Query	Plain Text
+power-query	Power Query	Plain Text
+powerbuilder	PowerBuilder	Plain Text
+powerquery	Power Query	Plain Text
+powershell	PowerShell	PowerShell
+praat	Praat	Plain Text
+prisma	Prisma	Plain Text
+pro*c	Pro*C	Perl
+processing	Processing	Plain Text
+procfile	Procfile	Plain Text
+progress	OpenEdge ABL	Pascal
+proguard	Proguard	Plain Text
+prolog	Prolog	Perl
+promela	Promela	Plain Text
+propeller spin	Propeller Spin	Plain Text
+propeller-spin	Propeller Spin	Plain Text
+proto	Protocol Buffer	Protocol Buffer
+protobuf	Protocol Buffer	Protocol Buffer
+protobuf text format	Protocol Buffer Text Format	Protocol Buffer (TEXT)
+protocol buffer	Protocol Buffer	Protocol Buffer
+protocol buffer text format	Protocol Buffer Text Format	Protocol Buffer (TEXT)
+protocol buffers	Protocol Buffer	Protocol Buffer
+protocol-buffer	Protocol Buffer	Protocol Buffer
+protocol-buffer-text-format	Protocol Buffer Text Format	Protocol Buffer (TEXT)
+public key	Public Key	Authorized Keys
+public-key	Public Key	Authorized Keys
+pug	Pug	Plain Text
+puppet	Puppet	Puppet
+pure data	Pure Data	Plain Text
+pure-data	Pure Data	Plain Text
+purebasic	PureBasic	Plain Text
+purescript	PureScript	PureScript
+pwsh	PowerShell	PowerShell
+py	Python	Python
+py3	Python	Python
+pycon	Python console	Plain Text
+pyret	Pyret	Plain Text
+pyrex	Cython	Python
+python	Python	Python
+python console	Python console	Plain Text
+python traceback	Python traceback	Plain Text
+python-console	Python console	Plain Text
+python-traceback	Python traceback	Plain Text
+python3	Python	Python
+q	q	Plain Text
+q#	Q#	Plain Text
+qb	QuickBASIC	Plain Text
+qb64	QuickBASIC	Plain Text
+qbasic	QuickBASIC	Plain Text
+ql	CodeQL	Plain Text
+qmake	QMake	Plain Text
+qml	QML	QML
+qsharp	Q#	Plain Text
+qt script	Qt Script	JavaScript
+qt-script	Qt Script	JavaScript
+quake	Quake	Plain Text
+quakec	QuakeC	Plain Text
+quartus simulation ip	Quartus Simulation IP	Tcl
+quartus-simulation-ip	Quartus Simulation IP	Tcl
+quickbasic	QuickBASIC	Plain Text
+quint	Quint	Plain Text
+r	R	R
+racket	Racket	Racket
+ragel	Ragel	Plain Text
+ragel-rb	Ragel	Plain Text
+ragel-ruby	Ragel	Plain Text
+rake	Ruby	Ruby
+raku	Raku	Perl
+raml	RAML	YAML
+rascal	Rascal	Plain Text
+rascript	RAScript	Plain Text
+raw	Raw token data	Plain Text
+raw token data	Raw token data	Plain Text
+raw-token-data	Raw token data	Plain Text
+razor	HTML+Razor	Plain Text
+rb	Ruby	Ruby
+rbs	RBS	Plain Text
+rbx	Ruby	Ruby
+rdoc	RDoc	Plain Text
+readline	Readline Config	Plain Text
+readline config	Readline Config	Plain Text
+readline-config	Readline Config	Plain Text
+realbasic	REALbasic	Plain Text
+reason	Reason	Regular Expression
+reasonligo	ReasonLIGO	Plain Text
+rebol	Rebol	R
+record jar	Record Jar	Plain Text
+record-jar	Record Jar	Plain Text
+red	Red	Plain Text
+red/system	Red	Plain Text
+redcode	Redcode	Plain Text
+redirect rules	Redirect Rules	Plain Text
+redirect-rules	Redirect Rules	Plain Text
+redirects	Redirect Rules	Plain Text
+redscript	Redscript	Plain Text
+regex	Regular Expression	Regular Expression
+regexp	Regular Expression	Regular Expression
+regular expression	Regular Expression	Regular Expression
+regular-expression	Regular Expression	Regular Expression
+ren'py	Ren'Py	Python
+renderscript	RenderScript	Rust
+renpy	Ren'Py	Python
+rescript	ReScript	Plain Text
+restructuredtext	reStructuredText	reStructuredText
+rexx	REXX	Plain Text
+rez	Rez	R
+rhai	Rhai	Plain Text
+rhtml	HTML+ERB	HTML (Rails)
+rich text format	Rich Text Format	Plain Text
+rich-text-format	Rich Text Format	Plain Text
+ring	Ring	Plain Text
+riot	Riot	Plain Text
+rmarkdown	RMarkdown	Plain Text
+robotframework	RobotFramework	Robot Framework
+robots	Robots Exclusion Rules	Plain Text
+robots exclusion rules	Robots Exclusion Rules	Plain Text
+robots txt	Robots Exclusion Rules	Plain Text
+robots-exclusion-rules	Robots Exclusion Rules	Plain Text
+robotx.txt	Robots Exclusion Rules	Plain Text
+roc	Roc	Plain Text
+rocq	Rocq Prover	Verilog
+rocq prover	Rocq Prover	Verilog
+rocq-prover	Rocq Prover	Verilog
+roff	Roff	Groff/troff
+roff manpage	Roff Manpage	Groff/troff
+roff-manpage	Roff Manpage	Groff/troff
+ron	RON	Plain Text
+ros interface	ROS Interface	Email
+ros-interface	ROS Interface	Email
+rosmsg	ROS Interface	Email
+rouge	Rouge	Clojure
+routeros script	RouterOS Script	Plain Text
+routeros-script	RouterOS Script	Plain Text
+rpc	RPC	C
+rpcgen	RPC	C
+rpgle	RPGLE	Plain Text
+rpm spec	RPM Spec	Plain Text
+rpm-spec	RPM Spec	Plain Text
+rs	Rust	Rust
+rs-274x	Gerber Image	Solidity
+rscript	R	R
+rss	XML	XML
+rst	reStructuredText	reStructuredText
+ruby	Ruby	Ruby
+runoff	RUNOFF	Plain Text
+rust	Rust	Rust
+rusthon	Python	Python
+sage	Sage	Python
+sail	Sail	Plain Text
+salt	Salt	Salt State (SLS)
+saltstack	Salt	Salt State (SLS)
+saltstate	Salt	Salt State (SLS)
+sarif	JSON	JSON
+sas	SAS	Plain Text
+sass	Sass	Sass
+scala	Scala	Scala
+scaml	Scaml	Plain Text
+scenic	Scenic	Plain Text
+scheme	Scheme	Lisp
+scilab	Scilab	Plain Text
+scss	SCSS	SCSS
+sdc	Tcl	Tcl
+sed	sed	Plain Text
+self	Self	Plain Text
+selinux kernel policy language	SELinux Policy	Plain Text
+selinux policy	SELinux Policy	Plain Text
+selinux-policy	SELinux Policy	Plain Text
+sepolicy	SELinux Policy	Plain Text
+sfv	Simple File Verification	Plain Text
+sh	Shell	Bourne Again Shell (bash)
+shaderlab	ShaderLab	Plain Text
+shell	Shell	Bourne Again Shell (bash)
+shell-script	Shell	Bourne Again Shell (bash)
+shellcheck config	ShellCheck Config	Plain Text
+shellcheck-config	ShellCheck Config	Plain Text
+shellcheckrc	ShellCheck Config	Plain Text
+shellsession	ShellSession	Plain Text
+shen	Shen	Plain Text
+sieve	Sieve	Plain Text
+simple file verification	Simple File Verification	Plain Text
+simple-file-verification	Simple File Verification	Plain Text
+singularity	Singularity	Plain Text
+sip	SIP	C++
+slang	Slang	Plain Text
+slash	Slash	Plain Text
+slice	Slice	Plain Text
+slim	Slim	Ruby Slim
+slint	Slint	Plain Text
+smali	Smali	Plain Text
+smalltalk	Smalltalk	C#
+smarty	Smarty	Plain Text
+smithy	Smithy	Plain Text
+sml	Standard ML	OCaml
+smpl	SmPL	Plain Text
+smt	SMT	Plain Text
+snakefile	Snakemake	Python
+snakemake	Snakemake	Python
+snipmate	Vim Snippet	Plain Text
+snippet	YASnippet	Plain Text
+solidity	Solidity	Solidity
+soong	Soong	Plain Text
+sourcemod	SourcePawn	x86_64 Assembly
+sourcepawn	SourcePawn	x86_64 Assembly
+soy	Closure Templates	Plain Text
+sparql	SPARQL	Plain Text
+specfile	RPM Spec	Plain Text
+spicedb schema	SpiceDB Schema	Plain Text
+spicedb-schema	SpiceDB Schema	Plain Text
+spline font database	Spline Font Database	Plain Text
+spline-font-database	Spline Font Database	Plain Text
+splus	R	R
+sqf	SQF	Plain Text
+sql	SQL	SQL
+sqlpl	SQLPL	SQL
+sqlrpgle	RPGLE	Plain Text
+squeak	Smalltalk	C#
+squirrel	Squirrel	Plain Text
+srecode template	SRecode Template	Lisp
+srecode-template	SRecode Template	Lisp
+ssh config	SSH Config	SSH Config
+ssh-config	SSH Config	SSH Config
+ssh_config	SSH Config	SSH Config
+sshconfig	SSH Config	SSH Config
+sshd_config	SSH Config	SSH Config
+sshdconfig	SSH Config	SSH Config
+stan	Stan	Plain Text
+standard ml	Standard ML	OCaml
+standard-ml	Standard ML	OCaml
+star	STAR	Plain Text
+starlark	Starlark	Python
+stata	Stata	Plain Text
+stl	STL	Plain Text
+stla	STL	Plain Text
+ston	STON	Plain Text
+stringtemplate	StringTemplate	Plain Text
+stylus	Stylus	Stylus
+subrip text	SubRip Text	Plain Text
+subrip-text	SubRip Text	Plain Text
+sugarss	SugarSS	Plain Text
+sum	Checksums	Plain Text
+sums	Checksums	Plain Text
+supercollider	SuperCollider	Scala
+surql	SurrealQL	Plain Text
+surrealql	SurrealQL	Plain Text
+survex data	Survex data	Plain Text
+survex-data	Survex data	Plain Text
+svelte	Svelte	Svelte
+svg	SVG	XML
+sway	Sway	Plain Text
+sweave	Sweave	Plain Text
+swift	Swift	Swift
+swig	SWIG	C++
+systemverilog	SystemVerilog	SystemVerilog
+tab-seperated values	TSV	Tab Separated Values
+tablegen	LLVM TableGen	Plain Text
+tabular model definition language	TMDL	Plain Text
+tact	Tact	Plain Text
+talon	Talon	Plain Text
+tape	Tape	Plain Text
+tcl	Tcl	Tcl
+tcsh	Tcsh	Shell-Unix-Generic
+tea	Tea	Plain Text
+teal	Teal	Plain Text
+templ	templ	Plain Text
+terra	Terra	Perl
+terraform	HCL	Terraform
+terraform template	Terraform Template	Plain Text
+terraform-template	Terraform Template	Plain Text
+tex	TeX	TeX
+texinfo	Texinfo	Plain Text
+text	Text	Plain Text
+text proto	Protocol Buffer Text Format	Protocol Buffer (TEXT)
+textgrid	TextGrid	Plain Text
+textile	Textile	Textile
+textmate properties	TextMate Properties	Plain Text
+textmate-properties	TextMate Properties	Plain Text
+thrift	Thrift	Plain Text
+ti program	TI Program	Plain Text
+ti-program	TI Program	Plain Text
+tl	Type Language	Plain Text
+tl-verilog	TL-Verilog	Plain Text
+tla	TLA	Plain Text
+tm-properties	TextMate Properties	Plain Text
+tmdl	TMDL	Plain Text
+toit	Toit	Plain Text
+tolk	Tolk	Plain Text
+toml	TOML	TOML
+topojson	JSON	JSON
+tor config	Tor Config	Plain Text
+tor-config	Tor Config	Plain Text
+torrc	Tor Config	Plain Text
+traveling salesman problem	TSPLIB data	Plain Text
+travelling salesman problem	TSPLIB data	Plain Text
+tree-sitter query	Tree-sitter Query	Lisp
+tree-sitter-query	Tree-sitter Query	Lisp
+troff	Roff	Groff/troff
+ts	TypeScript	TypeScript
+tsp	TypeSpec	Plain Text
+tsplib data	TSPLIB data	Plain Text
+tsplib-data	TSPLIB data	Plain Text
+tsq	Tree-sitter Query	Lisp
+tsql	TSQL	SQL
+tsv	TSV	Tab Separated Values
+tsx	TSX	TypeScriptReact
+turing	Turing	Perl
+turtle	Turtle	Plain Text
+twig	Twig	HTML (Twig)
+txl	TXL	Plain Text
+typ	Typst	Typst
+type language	Type Language	Plain Text
+type-language	Type Language	Plain Text
+typescript	TypeScript	TypeScript
+typescriptreact	TSX	TypeScriptReact
+typespec	TypeSpec	Plain Text
+typst	Typst	Typst
+ucode	ucode	Plain Text
+udiff	Diff	Diff
+ultisnip	Vim Snippet	Plain Text
+ultisnips	Vim Snippet	Plain Text
+unified parallel c	Unified Parallel C	C
+unified-parallel-c	Unified Parallel C	C
+unity3d asset	Unity3D Asset	YAML
+unity3d-asset	Unity3D Asset	YAML
+unix asm	Unix Assembly	ARM Assembly
+unix assembly	Unix Assembly	ARM Assembly
+unix-assembly	Unix Assembly	ARM Assembly
+uno	Uno	C#
+unrealscript	UnrealScript	Java
+untyped plutus core	Untyped Plutus Core	Plain Text
+untyped-plutus-core	Untyped Plutus Core	Plain Text
+ur	UrWeb	Plain Text
+ur/web	UrWeb	Plain Text
+urweb	UrWeb	Plain Text
+v	V	Verilog
+vala	Vala	Plain Text
+valve data format	Valve Data Format	Plain Text
+valve-data-format	Valve Data Format	Plain Text
+vb .net	Visual Basic .NET	Plain Text
+vb 6	Visual Basic 6.0	TeX
+vb.net	Visual Basic .NET	Plain Text
+vb6	Visual Basic 6.0	TeX
+vba	VBA	TeX
+vbnet	Visual Basic .NET	Plain Text
+vbscript	VBScript	Plain Text
+vcard	vCard	Plain Text
+vcl	VCL	Plain Text
+vdf	Valve Data Format	Plain Text
+velocity	Velocity Template Language	Plain Text
+velocity template language	Velocity Template Language	Plain Text
+velocity-template-language	Velocity Template Language	Plain Text
+vento	Vento	Plain Text
+verilog	Verilog	Verilog
+verse	Verse	Plain Text
+vespa	Vespa Schema Definition	Plain Text
+vespa schema definition	Vespa Schema Definition	Plain Text
+vespa-schema-definition	Vespa Schema Definition	Plain Text
+vhdl	VHDL	VHDL
+vhs	Tape	Plain Text
+vim	Vim script	VimL
+vim help file	Vim Help File	Plain Text
+vim script	Vim script	VimL
+vim snippet	Vim Snippet	Plain Text
+vim-help-file	Vim Help File	Plain Text
+vim-script	Vim script	VimL
+vim-snippet	Vim Snippet	Plain Text
+vimhelp	Vim Help File	Plain Text
+viml	Vim script	VimL
+vimscript	Vim script	VimL
+virtual contact file	vCard	Plain Text
+visual basic	Visual Basic .NET	Plain Text
+visual basic .net	Visual Basic .NET	Plain Text
+visual basic 6	Visual Basic 6.0	TeX
+visual basic 6.0	Visual Basic 6.0	TeX
+visual basic classic	Visual Basic 6.0	TeX
+visual basic for applications	VBA	TeX
+visual-basic-.net	Visual Basic .NET	Plain Text
+visual-basic-6.0	Visual Basic 6.0	TeX
+vlang	V	Verilog
+volt	Volt	D
+vtl	Velocity Template Language	Plain Text
+vtt	WebVTT	Plain Text
+vue	Vue	Vue Component
+vyper	Vyper	Vyper
+wasm	WebAssembly	Plain Text
+wast	WebAssembly	Plain Text
+wavefront material	Wavefront Material	Plain Text
+wavefront object	Wavefront Object	Plain Text
+wavefront-material	Wavefront Material	Plain Text
+wavefront-object	Wavefront Object	Plain Text
+wdl	WDL	Plain Text
+web ontology language	Web Ontology Language	XML
+web-ontology-language	Web Ontology Language	XML
+webassembly	WebAssembly	Plain Text
+webassembly interface type	WebAssembly Interface Type	Plain Text
+webassembly-interface-type	WebAssembly Interface Type	Plain Text
+webidl	WebIDL	Plain Text
+webvtt	WebVTT	Plain Text
+wget config	Wget Config	Plain Text
+wget-config	Wget Config	Plain Text
+wgetrc	Wget Config	Plain Text
+wgsl	WGSL	WGSL
+whiley	Whiley	Plain Text
+wiki	Wikitext	MediaWiki
+wikitext	Wikitext	MediaWiki
+win32 message file	Win32 Message File	Plain Text
+win32-message-file	Win32 Message File	Plain Text
+winbatch	Batchfile	Batch File
+windows registry entries	Windows Registry Entries	INI
+windows-registry-entries	Windows Registry Entries	INI
+wisp	wisp	Clojure
+wit	WebAssembly Interface Type	Plain Text
+witcher script	Witcher Script	Plain Text
+witcher-script	Witcher Script	Plain Text
+wl	Wolfram Language	Objective-C
+wolfram	Wolfram Language	Objective-C
+wolfram lang	Wolfram Language	Objective-C
+wolfram language	Wolfram Language	Objective-C
+wolfram-language	Wolfram Language	Objective-C
+wollok	Wollok	Plain Text
+workflow description language	WDL	Plain Text
+world of warcraft addon data	World of Warcraft Addon Data	Plain Text
+world-of-warcraft-addon-data	World of Warcraft Addon Data	Plain Text
+wren	Wren	Plain Text
+wrenlang	Wren	Plain Text
+wsdl	XML	XML
+x bitmap	X BitMap	C
+x font directory index	X Font Directory Index	Plain Text
+x pixmap	X PixMap	Perl
+x-bitmap	X BitMap	C
+x-font-directory-index	X Font Directory Index	Plain Text
+x-pixmap	X PixMap	Perl
+x10	X10	Plain Text
+xbase	xBase	Plain Text
+xbm	X BitMap	C
+xc	XC	Plain Text
+xcompose	XCompose	Plain Text
+xdc	Tcl	Tcl
+xdr	RPC	C
+xhtml	HTML	HTML
+xmake	Xmake	Plain Text
+xml	XML	XML
+xml property list	XML Property List	Plain Text
+xml+genshi	Genshi	Plain Text
+xml+kid	Genshi	Plain Text
+xml-property-list	XML Property List	Plain Text
+xojo	Xojo	Plain Text
+xonsh	Xonsh	Python
+xpages	XPages	XML
+xpm	X PixMap	Perl
+xproc	XProc	XML
+xquery	XQuery	Plain Text
+xs	XS	C
+xsd	XML	XML
+xsl	XSLT	XML
+xslt	XSLT	XML
+xten	X10	Plain Text
+xtend	Xtend	Plain Text
+yacc	Yacc	Plain Text
+yaml	YAML	YAML
+yang	YANG	Plain Text
+yara	YARA	Plain Text
+yas	YASnippet	Plain Text
+yasnippet	YASnippet	Plain Text
+yml	YAML	YAML
+yul	Yul	Plain Text
+zap	ZAP	Plain Text
+zeek	Zeek	Plain Text
+zenscript	ZenScript	Plain Text
+zephir	Zephir	Plain Text
+zig	Zig	Zig
+zil	ZIL	Lisp
+zimpl	Zimpl	Plain Text
+zmodel	Zmodel	Plain Text
+zsh	Shell	Bourne Again Shell (bash)

@@ -1,0 +1,7 @@
+<html><body>
+<h1>Greeting</h1>
+<erl>
+out(_Arg) ->
+    {html, "<p>Hello, reader!</p>"}.
+</erl>
+</body></html>

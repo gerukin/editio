@@ -1,0 +1,4 @@
+ID	Description	State
+7	A description with enough content to benefit from a wider viewport. Short identifier and state columns retain natural widths.	Ready
+104	A second description demonstrates the same separator preferences and greedy sizing used by Markdown and CSV.	Done
+2	Short text.	Ready

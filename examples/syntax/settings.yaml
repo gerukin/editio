@@ -1,0 +1,10 @@
+# Editor settings
+name: Editio
+enabled: true
+tab_size: 4
+languages:
+  - Rust
+  - YAML
+message: |
+  Hello, reader!
+  Keep text simple.

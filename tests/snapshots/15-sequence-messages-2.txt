@@ -1,0 +1,22 @@
+┌────────┐     ┌────────┐
+│ Client │     │ Server │
+└────┬───┘     └────┬───┘
+     │              │
+     │ Open message │
+     ├─────────────>│
+     │              │
+     │ Dotted open reply
+     │<┈┈┈┈┈┈┈┈┈┈┈┈┈┤
+     │              │
+     │ Cancel operation
+     ├─────────────×│
+     │              │
+     │ Cancellation acknowledged
+     │×┈┈┈┈┈┈┈┈┈┈┈┈┈┤
+     │              │
+     │ Filled arrow │
+     ├─────────────►│
+     │              │
+     │ Dotted filled reply
+     │◄┈┈┈┈┈┈┈┈┈┈┈┈┈┤
+     │              │

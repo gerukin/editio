@@ -1,0 +1,21 @@
+diff --git a/settings.txt b/settings.txt
+--- a/settings.txt
++++ b/settings.txt
+@@ -1,4 +1,5 @@
+ title=Demo
+-color=red
++color=blue
++enabled=true
+ width=80
+ wrap=true
+@@ -20,3 +21,2 @@
+ section=legacy
+-obsolete=true
+ keep=true
+diff --git a/note.txt b/note.txt
+--- a/note.txt
++++ b/note.txt
+@@ -1 +1 @@
+-A short line
++A much longer line with 日本語, emoji 🙂, and enough text to demonstrate that the change marker covers every continuation row when wrapping is enabled in a narrow terminal.
+\ No newline at end of file

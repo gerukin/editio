@@ -1,0 +1,10 @@
+Documents created and reviewed
+y: Documents
+20 │
+16 │               ──●█
+12 │       ──●───●─│███
+ 8 │   ──●─│███ ███ ███
+ 4 │█●─│███ ███ ███ ███
+ 0 ┼───────────────────
+    Mon Tue Wed Thu Fri
+x: Week

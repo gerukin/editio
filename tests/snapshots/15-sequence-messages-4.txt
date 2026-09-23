@@ -1,0 +1,24 @@
+┌────────┐     ┌─────────┐
+│ Client │     │ Service │
+└────┬───┘     └────┬────┘
+     │              │
+     │ A longer     │
+     │ request      │
+     │ description  │
+     │ that         │
+     │ demonstrates │
+     │ message      │
+     │ wrapping in a│
+     │ terminal     │
+     │ diagram      │
+     ├─────────────►│
+     │              │
+    ┌─────────────────────────┐
+    │ Both participants agree │
+    │  on a stable document   │
+    │  format before saving   │
+    └─────────────────────────┘
+     │              │
+     │ Accepted     │
+     │◄┈┈┈┈┈┈┈┈┈┈┈┈┈┤
+     │              │

@@ -1,0 +1,16 @@
+[package]
+name = "editio-diff-benchmark"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+imara-diff = "0.2"
+similar = "3"
+tapp-ui-renderers = { path = "../../../tapp-ui/crates/renderers" }
+
+[profile.release]
+lto = "thin"
+
+[patch.crates-io]
+crossterm = { path = "../../../tapp-ui/vendor/crossterm" }

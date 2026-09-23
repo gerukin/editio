@@ -1,0 +1,29 @@
+             ┌─────────────────┐
+             │ USER            │
+             ├─────────────────┤
+             │ int id PK       │
+             │ string email UK │
+             │ string name     │
+             └─────────────────┘
+                     ||
+                   writes
+                      │
+                     o{
+            ┌──────────────────┐
+            │ DOCUMENT         │
+            ├──────────────────┤
+            │ int id PK        │
+            │ int author_id FK │
+            │ string title     │
+            └──────────────────┘
+                     o{
+            contains  │  labeled
+           ┼──────────┼────────────┼
+          |{                      o{
+┌────────────────────┐    ┌─────────────────┐
+│ REVISION           │    │ TAG             │
+├────────────────────┤    ├─────────────────┤
+│ int id PK          │    │ int id PK       │
+│ int document_id FK │    │ string label UK │
+│ string content     │    └─────────────────┘
+└────────────────────┘

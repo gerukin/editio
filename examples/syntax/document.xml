@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Structured reader data. -->
+<readers enabled="true">
+  <reader id="1">Ada &amp; friends</reader>
+  <reader id="2"><![CDATA[Grace <Hopper>]]></reader>
+</readers>

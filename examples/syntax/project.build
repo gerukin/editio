@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<project name="demo" default="hello">
+  <!-- Declarative build example. -->
+  <property name="greeting" value="Hello" />
+  <target name="hello">
+    <echo message="${greeting}, reader!" />
+  </target>
+</project>

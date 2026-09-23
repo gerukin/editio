@@ -1,0 +1,8 @@
+Files by category
+y: Count
+   Notes │████████   24
+Articles │██████     18
+   Tasks │████       12
+  Drafts │██         6
+         ┼──────────
+          0       30

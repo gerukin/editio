@@ -1,0 +1,7 @@
+/* Terminal-inspired colors. */
+:root { --accent: #008080; }
+.editor {
+    color: var(--accent);
+    padding: 1rem 2rem;
+}
+.editor:hover { opacity: 0.8; }

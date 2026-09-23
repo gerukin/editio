@@ -1,0 +1,64 @@
+syntax	file	extensions
+Plain Text	syntax/plain.txt	txt
+ASP	syntax/server.asa	asa
+HTML (ASP)	syntax/page.asp	asp
+ActionScript	syntax/greeting.as	as
+AppleScript	syntax/greeting.applescript	applescript,script editor
+Batch File	syntax/greeting.bat	bat,cmd
+NAnt Build File	syntax/project.build	build
+C#	syntax/Greeting.cs	cs,csx
+C++	syntax/greeting.cpp	cpp,cc,cp,cxx,c++,C,h,hh,hpp,hxx,h++,inl,ipp
+C	syntax/greeting.c	c,h
+CSS	syntax/theme.css	css,css.erb,css.liquid
+Clojure	syntax/greeting.clj	clj
+D	syntax/greeting.d	d,di
+Diff	syntax/change.diff	diff,patch
+Erlang	syntax/greeting.erl	erl,hrl,Emakefile,emakefile
+HTML (Erlang)	syntax/page.yaws	yaws
+Go	syntax/greeting.go	go
+Graphviz (DOT)	syntax/workflow.dot	dot,DOT,gv
+Groovy	syntax/greeting.groovy	groovy,gvy,gradle
+HTML	syntax/page.html	html,htm,shtml,xhtml,inc,tmpl,tpl
+Haskell	syntax/Greeting.hs	hs
+Literate Haskell	syntax/Greeting.lhs	lhs
+Java Server Page (JSP)	syntax/page.jsp	jsp
+Java	syntax/Greeting.java	java,bsh
+Java Properties	syntax/app.properties	properties
+JSON	syntax/settings.json	json,sublime-settings,sublime-menu,sublime-keymap,sublime-mousemap,sublime-theme,sublime-build,sublime-project,sublime-completions,sublime-commands,sublime-macro,sublime-color-scheme
+JavaScript	syntax/greeting.js	js,htc
+BibTeX	syntax/references.bib	bib
+LaTeX	syntax/document.tex	tex,ltx
+TeX	syntax/greeting.sty	sty,cls
+Lisp	syntax/greeting.lisp	lisp,cl,clisp,l,mud,el,scm,ss,lsp,fasl
+Lua	syntax/greeting.lua	lua
+Makefile	syntax/Makefile	make,GNUmakefile,makefile,Makefile,OCamlMakefile,mak,mk
+Markdown	markdown/01-prose.md	md,mdown,markdown,markdn
+MATLAB	syntax/greeting.matlab	matlab
+OCaml	syntax/greeting.ml	ml,mli
+OCamllex	syntax/lexer.mll	mll
+OCamlyacc	syntax/parser.mly	mly
+Objective-C++	syntax/Greeting.mm	mm,M,h
+Objective-C	syntax/Greeting.m	m,h
+PHP	syntax/greeting.php	php,php3,php4,php5,php7,phps,phpt,phtml
+Pascal	syntax/greeting.pas	pas,p,dpr
+Perl	syntax/greeting.pl	pl,pm,pod,t,PL
+Python	syntax/greeting.py	py,py3,pyw,pyi,pyx,pyx.in,pxd,pxd.in,pxi,pxi.in,rpy,cpy,SConstruct,Sconstruct,sconstruct,SConscript,gyp,gypi,Snakefile,wscript
+R	syntax/greeting.R	R,r,s,S,Rprofile
+Rd (R Documentation)	syntax/greeting.rd	rd
+HTML (Rails)	syntax/page.html.erb	rails,rhtml,erb,html.erb
+JavaScript (Rails)	syntax/greeting.js.erb	js.erb
+Ruby Haml	syntax/page.haml	haml,sass
+Ruby on Rails	syntax/feed.builder	rxml,builder
+SQL (Rails)	syntax/query.sql.erb	erbsql,sql.erb
+Regular Expression	syntax/patterns.re	re
+reStructuredText	syntax/guide.rst	rst,rest
+Ruby	syntax/greeting.rb	rb,Appfile,Appraisals,Berksfile,Brewfile,capfile,cgi,Cheffile,config.ru,Deliverfile,Fastfile,fcgi,Gemfile,gemspec,Guardfile,irbrc,jbuilder,podspec,prawn,rabl,rake,Rakefile,Rantfile,rbx,rjs,ruby.rail,Scanfile,simplecov,Snapfile,thor,Thorfile,Vagrantfile
+Rust	syntax/greeting.rs	rs
+SQL	syntax/query.sql	sql,ddl,dml
+Scala	syntax/Greeting.scala	scala,sbt
+Bourne Again Shell (bash)	syntax/greeting.sh	sh,bash,zsh,fish,.bash_aliases,.bash_completions,.bash_functions,.bash_login,.bash_logout,.bash_profile,.bash_variables,.bashrc,.profile,.textmate_init
+HTML (Tcl)	syntax/page.adp	adp
+Tcl	syntax/greeting.tcl	tcl
+Textile	syntax/guide.textile	textile
+XML	syntax/document.xml	xml,xsd,xslt,tld,dtml,rss,opml,svg
+YAML	syntax/settings.yaml	yaml,yml,sublime-syntax

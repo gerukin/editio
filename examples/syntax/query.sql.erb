@@ -1,0 +1,5 @@
+-- SQL with a Ruby template expression.
+SELECT id, name
+FROM readers
+WHERE active = TRUE
+LIMIT <%= Integer(@limit) %>;

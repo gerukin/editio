@@ -1,0 +1,6 @@
+Name,City,Notes,Score
+Alice,London,"Comma inside a field, preserved",42
+"Bob ""Bobby"" Lee",Paris,"First line
+Second line",17
+猫,東京,Unicode text and 🦀,100
+Empty fields,,,
