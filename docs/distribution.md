@@ -103,18 +103,19 @@ cargo run --locked --manifest-path tools/release/Cargo.toml -- publish
 ```
 
 This builds all six optimized binaries into `target/publish` (Unix) and `target/publish-windows-static` (Windows), bundles licenses,
-creates archives/checksums and the Homebrew formula under `dist/<version>`, pushes
+creates archives/checksums and Homebrew recipes under `dist/<version>`, pushes
 Editio's HEAD to `origin/main`, and uploads a **draft** GitHub Release. Nothing is
 pushed until all six builds/package steps succeed. Framework source is never
 uploaded. Both source commit IDs are recorded in the archives.
 
 Finalize the draft using the printed command. Copy the generated `editio.rb` to
-`Formula/editio.rb` in this repository, commit, and push it. This is only
+`Formula/editio.rb` and `editio.cask.rb` to `Casks/editio.rb` in this repository,
+commit, and push them. This is only
 package metadata: no rebuild. Existing releases are not overwritten. If upload
 fails, recover the draft using `gh release upload` and the existing `dist` files;
 do not rebuild unless sources changed.
 
-The shell installer and Homebrew formula are small platform packaging adapters;
+The shell installer and Homebrew recipes are small platform packaging adapters;
 the editor and local publishing tool remain Rust.
 
 ## 0.1.0 installation checks
