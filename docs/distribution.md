@@ -135,3 +135,15 @@ Windows x86-64 was tested on Surface before publication; a fresh public ZIP test
 could not run because that machine was unreachable. The remaining architectures
 are cross-compiled and untested. A repeat install/update check is not evidence of
 upgrading between two different release versions (0.1.0 is the first release).
+
+## 0.1.1 installation checks
+
+All six uploaded archives were downloaded and verified against SHA256SUMS.
+Both Linux builds require at most glibc 2.28; both macOS builds declare minimum
+macOS 11. Both Windows builds import system DLLs without a separate VC runtime.
+The public installer upgraded an isolated Linux installation from 0.1.0 to
+0.1.1 successfully. Pinned mise 0.1.1 installation also passed. Homebrew recipes
+passed Ruby syntax checks; a live Homebrew upgrade was not repeated this release.
+User testing of the feature update passed on Linux x86-64, the personal ARM64 Mac
+and x86-64 Surface before publication. Linux ARM64, macOS Intel and Windows ARM64
+remain untested at runtime. Developer installations were left unchanged.
