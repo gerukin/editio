@@ -32,11 +32,15 @@ With [mise](https://mise.jdx.dev/) (including Omarchy/Arch):
 mise use -g github:gerukin/editio@latest
 ```
 
-With Homebrew, using this same repository as the tap:
+mise may delay `@latest` for 24 hours after a release. To install this new release
+immediately, use `mise use -g github:gerukin/editio@0.1.0`; switch back to `@latest`
+after that window.
+
+With Homebrew on macOS, using this same repository as the tap:
 
 ```sh
 brew tap gerukin/editio https://github.com/gerukin/editio
-brew install gerukin/editio/editio
+brew install --cask gerukin/editio/editio
 ```
 
 Or install **and update** on Linux/macOS with the same one-liner:

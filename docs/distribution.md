@@ -11,14 +11,20 @@ Issues and PRs are welcome; accepting a PR does not grant repository access.
 ## Install and update
 
 - **mise (including Omarchy/Arch):** `mise use -g github:gerukin/editio@latest`.
-  Update with `mise upgrade github:gerukin/editio`.
+  Update with `mise upgrade github:gerukin/editio`. mise's default 24-hour release
+  age rule can temporarily hide a brand-new version from `@latest`. Install
+  `github:gerukin/editio@0.1.0` explicitly during that window; use
+  `mise use -g github:gerukin/editio@latest` afterward to follow releases.
 - **Linux/macOS installer:** use the one-liner below for installation and updates.
   Append `-s -- 0.1.0` to `sh` to select a specific version.
   Default: `~/.local/bin`; override with `EDITIO_INSTALL_DIR`.
 - **Homebrew:** `brew tap gerukin/editio https://github.com/gerukin/editio`, then
-  `brew install gerukin/editio/editio`. Update with `brew upgrade editio`. The
-  formula lives in this repository under `Formula/`; no second repository or
-  Homebrew core submission is needed.
+  `brew install --cask gerukin/editio/editio` on macOS. Update with
+  `brew upgrade --cask editio`. This binary cask avoids unnecessary Xcode build
+  requirements; bundled notices remain in Homebrew's Caskroom. On Linux, use
+  `brew install --formula gerukin/editio/editio` and `brew upgrade editio`.
+  Both recipes live in this repository (`Casks/` and `Formula/`); no second
+  repository or Homebrew core submission is needed.
 - **Windows/manual:** extract the archive for your OS/architecture from GitHub
   Releases and add its directory to PATH. To update, close Editio and replace
   the executable. Keep the included licenses with the distribution.
@@ -85,7 +91,7 @@ Before first publication:
    Set `SDKROOT` to a legally obtained macOS SDK; Windows builds require the
    Microsoft SDK/toolchain terms. Normal builds do not download SDKs.
 3. Homebrew uses this same repository as a custom tap. The helper generates
-   `Formula/editio.rb` content using actual archive checksums.
+   `Formula/editio.rb` and `Casks/editio.rb` content using actual archive checksums.
 
 For each release, update Cargo's version and move the relevant `Unreleased`
 entries under `## [0.1.0] - YYYY-MM-DD` (using the actual version/date). Keep an

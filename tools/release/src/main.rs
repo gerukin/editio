@@ -87,6 +87,25 @@ fn formula(version: &str, hashes: &[String]) -> String {
     text
 }
 
+fn cask(version: &str, hashes: &[String]) -> String {
+    format!(
+        r#"cask "editio" do
+  version "{version}"
+  arch arm: "aarch64", intel: "x86_64"
+  sha256 arm: "{arm}", intel: "{intel}"
+  url "https://github.com/{REPO}/releases/download/v#{{version}}/editio-#{{version}}-#{{arch}}-apple-darwin.tar.gz"
+  name "Editio"
+  desc "Fast, minimal terminal text viewer and editor"
+  homepage "https://github.com/{REPO}"
+  depends_on macos: ">= :big_sur"
+  binary "editio"
+end
+"#,
+        arm = hashes[3],
+        intel = hashes[2]
+    )
+}
+
 fn target_status(target: &str) -> &'static str {
     match target {
         "x86_64-unknown-linux-gnu" => {
@@ -257,6 +276,7 @@ fn publish(version: &str) -> Result<()> {
     }
     fs::write(dist.join("SHA256SUMS"), checksums)?;
     fs::write(dist.join("editio.rb"), formula(version, &hashes))?;
+    fs::write(dist.join("editio.cask.rb"), cask(version, &hashes))?;
     fs::write(
         dist.join("notes.md"),
         format!(
@@ -287,11 +307,12 @@ fn publish(version: &str) -> Result<()> {
         dist.join("SHA256SUMS"),
         dist.join("install.sh"),
         dist.join("editio.rb"),
+        dist.join("editio.cask.rb"),
     ]);
     args.extend(archives.iter().map(|p| p.to_string_lossy().into_owned()));
     run("gh", &args.iter().map(String::as_str).collect::<Vec<_>>())?;
     println!(
-        "Draft uploaded. Publish with: gh release edit {tag} --repo {REPO} --draft=false --latest\nCopy {}/editio.rb to Formula/editio.rb in this same repository, then commit and push it.",
+        "Draft uploaded. Publish with: gh release edit {tag} --repo {REPO} --draft=false --latest\nCopy {}/editio.rb to Formula/editio.rb and editio.cask.rb to Casks/editio.rb in this same repository, then commit and push them.",
         dist.display()
     );
     Ok(())
@@ -343,6 +364,9 @@ mod tests {
         assert!(formula.contains("on_macos") && formula.contains("on_linux"));
         assert!(!formula.contains("windows"));
         assert_eq!(formula.matches("sha256").count(), 4);
+        let cask = cask("0.1.0", &vec!["a".repeat(64); 6]);
+        assert!(cask.contains("binary \"editio\"") && cask.contains("depends_on macos"));
+        assert!(cask.contains("sha256 arm:") && cask.contains("intel:"));
         assert!(version("[package]\nversion = \"0.1\"").is_err());
     }
 }
