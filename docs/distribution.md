@@ -116,3 +116,17 @@ do not rebuild unless sources changed.
 
 The shell installer and Homebrew formula are small platform packaging adapters;
 the editor and local publishing tool remain Rust.
+
+## 0.1.0 installation checks
+
+The public curl install/reinstall route was exercised on Linux x86-64 and macOS
+ARM64. Explicit `mise ...@0.1.0` installation passed on Linux; `@latest` remains
+subject to mise's 24-hour release-age rule. Homebrew cask installation and its
+already-current upgrade check passed on macOS, but the quarantined first launch
+stalled over SSH. No security settings were changed; notarization is deferred.
+The same Mac ran the curl-installed executable successfully.
+
+Windows x86-64 was tested on Surface before publication; a fresh public ZIP test
+could not run because that machine was unreachable. The remaining architectures
+are cross-compiled and untested. A repeat install/update check is not evidence of
+upgrading between two different release versions (0.1.0 is the first release).

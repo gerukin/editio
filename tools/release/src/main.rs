@@ -97,7 +97,7 @@ fn cask(version: &str, hashes: &[String]) -> String {
   name "Editio"
   desc "Fast, minimal terminal text viewer and editor"
   homepage "https://github.com/{REPO}"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   binary "editio"
 end
 "#,

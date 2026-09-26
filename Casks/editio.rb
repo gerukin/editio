@@ -7,6 +7,6 @@ cask "editio" do
   name "Editio"
   desc "Fast, minimal terminal text viewer and editor"
   homepage "https://github.com/gerukin/editio"
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
   binary "editio"
 end
