@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-09-26
+
+### Added
+
+- Duplicate / Save as with a choice to save the original first or carry unsaved
+  changes only to the new file; failed writes retain the original association.
+- Native event-driven monitoring of the open file, clean-buffer reloads and an
+  explicit conflict dialog for unsaved edits. Disable for a session with
+  `--no-watch` or the command palette.
+
+### Fixed
+
+- macOS release builds now honor the advertised macOS 11 minimum.
+
 ## [0.1.0] - 2026-09-26
 
 ### Added

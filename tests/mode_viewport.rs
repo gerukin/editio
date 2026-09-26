@@ -361,9 +361,9 @@ fn editing_actions_do_not_leave_saved_untitled_documents_in_source_view() {
                 KeyCode::Enter,
                 KeyModifiers::NONE
             ))),
-            Outcome::SaveRequested
+            Outcome::SaveAsRequested(path.clone())
         );
-        let saved = e.buffer.save();
+        let saved = e.buffer.save_as(&path);
         e.save_finished(saved);
         let source = e.buffer.text.to_string();
         e.act(Action::ToggleMode);

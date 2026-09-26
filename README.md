@@ -33,7 +33,7 @@ mise use -g github:gerukin/editio@latest
 ```
 
 mise may delay `@latest` for 24 hours after a release. To install this new release
-immediately, use `mise use -g github:gerukin/editio@0.1.0`; switch back to `@latest`
+immediately, use `mise use -g github:gerukin/editio@0.1.1`; switch back to `@latest`
 after that window.
 
 With Homebrew on macOS, using this same repository as the tap:

@@ -83,8 +83,11 @@ fn quit_dialog_is_modal_and_untitled_save_and_quit_finishes_only_after_success()
     assert_eq!(key(&mut e, K::Char('s')), Outcome::Handled);
     assert_eq!(e.prompt.as_ref().unwrap().kind, PromptKind::SaveAs);
     e.handle(Event::Paste(format!("\"{}\"", path.display())));
-    assert_eq!(key(&mut e, K::Enter), Outcome::SaveRequested);
-    let result = e.buffer.save();
+    assert_eq!(
+        key(&mut e, K::Enter),
+        Outcome::SaveAsRequested(path.clone())
+    );
+    let result = e.buffer.save_as(&path);
     assert_eq!(e.save_finished(result), Outcome::QuitRequested);
     assert_eq!(std::fs::read_to_string(path).unwrap(), "keep me");
 }
@@ -229,8 +232,10 @@ fn cancelling_filename_after_save_and_quit_does_not_quit_on_a_later_save() {
     e.handle(Event::Paste(
         dir.path().join("later.txt").to_string_lossy().into_owned(),
     ));
-    assert_eq!(key(&mut e, K::Enter), Outcome::SaveRequested);
-    let result = e.buffer.save();
+    let Outcome::SaveAsRequested(path) = key(&mut e, K::Enter) else {
+        panic!("Expected save path");
+    };
+    let result = e.buffer.save_as(&path);
     assert_eq!(e.save_finished(result), Outcome::Handled);
 }
 
@@ -306,8 +311,11 @@ fn untitled_switch_save_as_cancel_and_success() {
     e.request_document_switch();
     key(&mut e, K::Char('s'));
     e.handle(Event::Paste(path.display().to_string()));
-    assert_eq!(key(&mut e, K::Enter), Outcome::SaveRequested);
-    let result = e.buffer.save();
+    assert_eq!(
+        key(&mut e, K::Enter),
+        Outcome::SaveAsRequested(path.clone())
+    );
+    let result = e.buffer.save_as(&path);
     assert_eq!(e.save_finished(result), Outcome::DocumentSwitchReady);
     assert_eq!(std::fs::read_to_string(path).unwrap(), "keep me");
 }

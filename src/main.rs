@@ -4,7 +4,9 @@ use editio::{Editor, Mode, Outcome, buffer::Buffer, terminal::Session};
 use std::{io, io::IsTerminal, path::PathBuf, process::ExitCode};
 mod editorconfig;
 mod events;
+mod file_conflict;
 mod file_ui;
+mod file_watch;
 mod files;
 mod links;
 mod piped;
@@ -47,6 +49,9 @@ struct Args {
     /// Disable soft wrapping for Markdown and prose files
     #[arg(long)]
     no_wrap: bool,
+    /// Disable automatic detection of external changes for this session
+    #[arg(long)]
+    no_watch: bool,
     /// Disable automatic copying when a text selection is completed
     #[arg(long)]
     no_copy_on_selection: bool,
@@ -71,6 +76,41 @@ fn main() -> ExitCode {
 }
 
 const DIRECTORY_NOTICE: &str = "Opening directories will be supported in a future version of Editio.\n\nFor now, replace this text with your content and press Ctrl+S to save a file here.\nEnter a relative file name, such as notes.md, in the save dialog.\n";
+
+fn poll_file_changes(
+    monitor: &mut file_watch::Monitor,
+    conflict: &mut Option<file_conflict::Conflict>,
+    editor: &mut Editor,
+    navigation: &mut file_ui::Navigation,
+) -> bool {
+    let baseline = conflict.as_ref().map_or(&editor.buffer, |c| &c.disk);
+    let Some(result) = monitor.poll(baseline) else {
+        return false;
+    };
+    if let Ok(disk) = &result
+        && let Err(error) = monitor.sync(disk)
+    {
+        editor.notify_error(format!("File monitoring: {error}"));
+    }
+    match result {
+        Err(error) => editor.notify_error(format!("File update: {error}; current text retained")),
+        Ok(disk) if editor.buffer.dirty() || conflict.is_some() => {
+            navigation.cancel();
+            editor.cancel_file_actions();
+            editor.command_scope.set_focused(false);
+            if let Some(conflict) = conflict {
+                conflict.disk = disk;
+            } else {
+                *conflict = Some(file_conflict::Conflict::new(disk));
+            }
+        }
+        Ok(disk) => {
+            editor.reload_disk(disk);
+            editor.notify_success("Reloaded external file changes");
+        }
+    }
+    true
+}
 
 fn run() -> io::Result<ExitCode> {
     let args = Args::parse();
@@ -242,15 +282,29 @@ fn run() -> io::Result<ExitCode> {
         editor.notify_error(format!("History: {error}"));
     }
     let mut pending_document: Option<(Editor, file_ui::Open)> = None;
+    let mut monitor = file_watch::Monitor::new(!args.no_watch, wake.clone());
+    let mut conflict: Option<file_conflict::Conflict> = None;
     recovery.comparing = recovered;
     let mut palette_requested =
         !editor.monochrome && tapp_ui::terminal::request_selection_background().unwrap_or(false);
     let result = (|| -> io::Result<ExitCode> {
         loop {
+            editor.file_watching = Some(monitor.enabled());
+            if let Err(error) = monitor.sync(conflict.as_ref().map_or(&editor.buffer, |c| &c.disk))
+            {
+                editor.notify_error(format!("File monitoring: {error}"));
+            }
+            poll_file_changes(&mut monitor, &mut conflict, &mut editor, &mut navigation);
             indentation_config.sync(&mut editor);
             session.terminal.draw(|f| {
+                editor
+                    .command_scope
+                    .set_focused(conflict.is_none() && !navigation.visible());
                 editor.draw(f, f.area());
                 navigation.draw(f, f.area(), &editor);
+                if let Some(conflict) = &mut conflict {
+                    conflict.draw(f, &editor);
+                }
             })?;
             let event = loop {
                 if shutdown.requested() {
@@ -263,6 +317,9 @@ fn run() -> io::Result<ExitCode> {
                     session.terminal.draw(|f| {
                         editor.draw(f, f.area());
                         navigation.draw(f, f.area(), &editor);
+                        if let Some(conflict) = &mut conflict {
+                            conflict.draw(f, &editor);
+                        }
                     })?;
                 }
                 let editor_wait = editor.next_wakeup();
@@ -272,14 +329,25 @@ fn run() -> io::Result<ExitCode> {
                     .chain(recovery.next_wakeup())
                     .chain(cleanup.next_wakeup())
                     .chain(navigation.next_wakeup())
+                    .chain(monitor.next_wakeup())
                     .min();
                 let Some(e) = events.wait(wait)? else {
-                    let background = editor.poll_background() | navigation.poll(&mut editor);
+                    let background = editor.poll_background()
+                        | navigation.poll(&mut editor)
+                        | poll_file_changes(
+                            &mut monitor,
+                            &mut conflict,
+                            &mut editor,
+                            &mut navigation,
+                        );
                     let clipboard_feedback = copy_selection(&mut editor, &mut clipboard);
                     if editor.poll_timers() || background || clipboard_feedback {
                         session.terminal.draw(|f| {
                             editor.draw(f, f.area());
                             navigation.draw(f, f.area(), &editor);
+                            if let Some(conflict) = &mut conflict {
+                                conflict.draw(f, &editor);
+                            }
                         })?;
                     }
                     continue;
@@ -296,6 +364,40 @@ fn run() -> io::Result<ExitCode> {
                 if palette_requested {
                     tapp_ui::theme::set_terminal_background(r, g, b);
                     palette_requested = false;
+                }
+                continue;
+            }
+            if let Some(dialog) = &mut conflict {
+                if let Some(choice) = dialog.handle(&event) {
+                    let dialog = conflict.take().unwrap();
+                    match choice {
+                        file_conflict::Choice::Disk => {
+                            editor.reload_disk(dialog.disk);
+                            if let Err(error) = recovery.clear() {
+                                editor.notify_error(format!("Recovery: {error}"));
+                            }
+                            editor.notify_success("Loaded updated file; local changes discarded");
+                        }
+                        file_conflict::Choice::Copy | file_conflict::Choice::Compare => {
+                            editor.detach_copy();
+                            editor.end_comparison();
+                            recovery.comparing = false;
+                            if matches!(choice, file_conflict::Choice::Compare) {
+                                match editor.compare_with(&dialog.disk) {
+                                    Ok(()) => recovery.comparing = true,
+                                    Err(reason) => editor.notify_warning(reason),
+                                }
+                            }
+                            if let Err(error) =
+                                recovery.checkpoint(&editor.buffer, recovery_format.as_deref())
+                            {
+                                editor.notify_error(format!("Recovery: {error}"));
+                            }
+                            editor.notify_success("Kept as unsaved copy; Save requires a new path");
+                        }
+                    }
+                    pending_document = None;
+                    editor.command_scope.set_focused(true);
                 }
                 continue;
             }
@@ -343,9 +445,25 @@ fn run() -> io::Result<ExitCode> {
                 Outcome::PasteRequested => {
                     paste_clipboard(&mut editor, clipboard.as_mut().map(|c| c.get_text()));
                 }
-                Outcome::SaveRequested => {
-                    let result = editor.buffer.save();
+                Outcome::WatchRequested => {
+                    monitor.toggle();
+                    editor.file_watching = Some(monitor.enabled());
+                    editor.notify(if monitor.enabled() {
+                        "File monitoring enabled"
+                    } else {
+                        "File monitoring disabled for this session"
+                    });
+                }
+                Outcome::SaveRequested | Outcome::SaveAsRequested(_) => {
+                    let result = if let Outcome::SaveAsRequested(ref path) = outcome {
+                        editor.buffer.save_as(path)
+                    } else {
+                        editor.buffer.save()
+                    };
                     if result.is_ok() {
+                        if let Err(error) = monitor.saved(&editor.buffer) {
+                            editor.notify_error(format!("File monitoring: {error}"));
+                        }
                         if recovery.comparing {
                             editor.end_comparison();
                             recovery.comparing = false;

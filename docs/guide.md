@@ -4,6 +4,30 @@ See the [quick start](../README.md) for installation and basic usage.
 
 ## Controls
 
+**Duplicate / save as new file** in Ctrl+K asks for a new path and switches to the
+copy after a successful save. With unsaved edits, choose whether to save the
+original first or take the edits only to the copy. Existing destinations are
+protected; missing directories are created. Ctrl+U clears the suggested path.
+
+External changes to the current file are detected automatically. Clean documents
+reload with a toast, retaining nearby position/selection and refreshing Find.
+With unsaved edits, a modal offers an independent unsaved copy, a copy compared
+with the updated disk version, or discarding local edits and loading disk content.
+Enter/Esc safely keeps a copy; saving it requires a new path. Comparison ends on
+successful save. Deleted/unreadable/invalid files leave current text intact.
+
+Use `--no-watch` or **Disable file change monitoring** in Ctrl+K to disable this
+for the current session. Monitoring uses native notifications, not periodic
+scanning. Untitled copies are not watched. Comparison references are snapshots;
+only the active file is monitored. Filesystems that do not deliver native events
+still have the existing save-time conflict protection.
+For a never-saved path whose parent folders do not exist, monitoring starts after
+the first successful save creates them.
+Automatic reloads are capped at 64 MiB; larger external versions leave the current
+buffer intact with a warning to reopen manually. This also bounds reads if a file
+grows while being read. Cursor/selection relocation searches nearby content rather
+than diffing whole documents; very large or no-longer-matching selections clear.
+
 Opening a directory starts an untitled explanatory document with that directory
 as the working directory. Replace the text and save with a relative filename.
 Workspace browsing is not implemented yet.

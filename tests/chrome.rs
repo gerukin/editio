@@ -581,6 +581,11 @@ fn typed_toasts_use_callout_colors_and_errors_do_not_color_later_notices() {
     }
     // Exercise a real validation failure, rather than only the typed API.
     e.act(Action::SaveAs);
+    if e.prompt.is_none() {
+        key(&mut e, K::Enter, M::NONE);
+    }
+    e.prompt.as_mut().unwrap().value.clear();
+    e.prompt.as_mut().unwrap().cursor = 0;
     key(&mut e, K::Enter, M::NONE);
     let s = draw(&mut e, 80, 24);
     let y = (0..23)

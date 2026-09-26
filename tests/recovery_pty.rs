@@ -217,6 +217,69 @@ fn failed_save_during_recovery_keeps_draft_and_external_file() {
     assert_eq!(fs::read_to_string(file).unwrap(), "external after opening");
     assert_eq!(drafts(dir.path()).len(), 1);
 }
+
+#[test]
+fn external_reload_and_dirty_copy_flow_in_a_real_terminal() {
+    let dir = tempfile::tempdir().unwrap();
+    let file = dir.path().join("watched.txt");
+    fs::write(&file, "INITIAL-DOCUMENT").unwrap();
+    let mut app = App::start(dir.path(), Some(&file));
+    app.wait("EDIT");
+    fs::write(&file, "EXTERNAL-CLEAN-UPDATE").unwrap();
+    app.wait("Reloaded");
+    app.send(b"\x1b[200~LOCAL-EDIT-\x1b[201~");
+    app.wait("LOCAL-EDIT-");
+    fs::write(&file, "EXTERNAL-DIRTY-UPDATE").unwrap();
+    app.wait("File changed on disk");
+    app.send(b"\r"); // safe default keeps independent unsaved copy
+    app.wait("Kept");
+    assert_eq!(fs::read_to_string(&file).unwrap(), "EXTERNAL-DIRTY-UPDATE");
+    app.send(b"\x13");
+    app.wait("Enter:");
+    // Clear the suggested path, then choose a distinct destination.
+    app.send(b"\x15");
+    app.send(b"\x1b[200~copy.txt\x1b[201~\r");
+    app.wait("Saved");
+    assert!(
+        fs::read_to_string(dir.path().join("copy.txt"))
+            .unwrap()
+            .contains("LOCAL-EDIT-")
+    );
+    assert_eq!(fs::read_to_string(&file).unwrap(), "EXTERNAL-DIRTY-UPDATE");
+    app.send(b"\x11");
+    app.exit(0);
+}
+
+#[test]
+fn external_conflict_discard_and_compare_choices() {
+    for compare in [false, true] {
+        let dir = tempfile::tempdir().unwrap();
+        let file = dir.path().join("watched.txt");
+        fs::write(&file, "ORIGINAL").unwrap();
+        let mut app = App::start(dir.path(), Some(&file));
+        app.wait("EDIT");
+        app.send(b"\x1b[200~LOCAL-\x1b[201~");
+        app.wait("LOCAL-");
+        fs::write(&file, "EXTERNAL").unwrap();
+        app.wait("File changed on disk");
+        if compare {
+            app.send(b"\x1b[D\r");
+            app.wait("Kept");
+        } else {
+            app.send(b"\x1b[C\r");
+            app.wait("Loaded");
+        }
+        assert_eq!(fs::read_to_string(&file).unwrap(), "EXTERNAL");
+        if compare {
+            app.signal(libc::SIGTERM);
+            app.exit(1);
+            assert_eq!(drafts(dir.path()).len(), 1);
+        } else {
+            app.send(b"\x11");
+            app.exit(0);
+        }
+    }
+}
 #[test]
 fn actual_thirty_second_debounce_checkpoints_without_exit() {
     let dir = tempfile::tempdir().unwrap();

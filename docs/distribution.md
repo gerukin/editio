@@ -13,10 +13,10 @@ Issues and PRs are welcome; accepting a PR does not grant repository access.
 - **mise (including Omarchy/Arch):** `mise use -g github:gerukin/editio@latest`.
   Update with `mise upgrade github:gerukin/editio`. mise's default 24-hour release
   age rule can temporarily hide a brand-new version from `@latest`. Install
-  `github:gerukin/editio@0.1.0` explicitly during that window; use
+  `github:gerukin/editio@0.1.1` explicitly during that window; use
   `mise use -g github:gerukin/editio@latest` afterward to follow releases.
 - **Linux/macOS installer:** use the one-liner below for installation and updates.
-  Append `-s -- 0.1.0` to `sh` to select a specific version.
+  Append `-s -- 0.1.1` to `sh` to select a specific version.
   Default: `~/.local/bin`; override with `EDITIO_INSTALL_DIR`.
 - **Homebrew:** `brew tap gerukin/editio https://github.com/gerukin/editio`, then
   `brew install --cask gerukin/editio/editio` on macOS. Update with
@@ -107,6 +107,10 @@ creates archives/checksums and Homebrew recipes under `dist/<version>`, pushes
 Editio's HEAD to `origin/main`, and uploads a **draft** GitHub Release. Nothing is
 pushed until all six builds/package steps succeed. Framework source is never
 uploaded. Both source commit IDs are recorded in the archives.
+
+Linux uses Zig with a glibc 2.28 baseline. macOS uses Clang and Rust's bundled
+`ld64.lld` with the local SDK to enforce macOS 11 (Zig may raise that minimum).
+Windows uses cargo-xwin with the static C runtime.
 
 Finalize the draft using the printed command. Copy the generated `editio.rb` to
 `Formula/editio.rb` and `editio.cask.rb` to `Casks/editio.rb` in this repository,

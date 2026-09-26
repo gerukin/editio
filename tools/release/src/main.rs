@@ -111,7 +111,9 @@ fn target_status(target: &str) -> &'static str {
         "x86_64-unknown-linux-gnu" => {
             "Tested on the developer's Linux machine; other distributions untested."
         }
-        "aarch64-apple-darwin" => "Tested on two ARM64 Macs; not Developer ID signed or notarized.",
+        "aarch64-apple-darwin" => {
+            "Tested on the developer's ARM64 Mac; not Developer ID signed or notarized."
+        }
         "x86_64-pc-windows-msvc" => {
             "Tested on an x86-64 Surface; unsigned, application-control policies may block execution."
         }
@@ -177,7 +179,13 @@ fn publish(version: &str) -> Result<()> {
             target.to_owned()
         };
         let mut build = Command::new("cargo");
-        build.arg(if windows { "xwin" } else { "zigbuild" });
+        build.arg(if windows {
+            "xwin"
+        } else if target.contains("apple") {
+            "build"
+        } else {
+            "zigbuild"
+        });
         if windows {
             build.arg("build");
         }
@@ -206,6 +214,49 @@ fn publish(version: &str) -> Result<()> {
         }
         if target.contains("apple") {
             build.env("MACOSX_DEPLOYMENT_TARGET", "11.0");
+            build.env("CC_SHELL_ESCAPED_FLAGS", "1");
+            let sdk = env::var("SDKROOT")?;
+            let host = capture("rustc", &["-vV"])?;
+            let host = host
+                .lines()
+                .find_map(|line| line.strip_prefix("host: "))
+                .ok_or("Missing Rust host")?;
+            let sysroot = capture("rustc", &["--print", "sysroot"])?;
+            let linker = format!("{sysroot}/lib/rustlib/{host}/bin/gcc-ld/ld64.lld");
+            let arch = if target.starts_with("aarch64") {
+                "arm64"
+            } else {
+                "x86_64"
+            };
+            let clang_target = format!("{arch}-apple-macos11.0");
+            let mut flags = env::var("CARGO_ENCODED_RUSTFLAGS").unwrap_or_default();
+            for flag in [
+                "-C".into(),
+                "linker=clang".into(),
+                "-C".into(),
+                format!("link-arg=--target={clang_target}"),
+                "-C".into(),
+                "link-arg=-isysroot".into(),
+                "-C".into(),
+                format!("link-arg={sdk}"),
+                "-C".into(),
+                format!("link-arg=-fuse-ld={linker}"),
+                "-C".into(),
+                "link-arg=-Wl,-platform_version,macos,11.0,15.4".into(),
+                "-C".into(),
+                "link-arg=-Wl,-adhoc_codesign".into(),
+            ] {
+                if !flags.is_empty() {
+                    flags.push('\x1f');
+                }
+                flags.push_str(&flag);
+            }
+            build.env("CARGO_ENCODED_RUSTFLAGS", flags);
+            build.env(format!("CC_{}", target.replace('-', "_")), "clang");
+            build.env(
+                format!("CFLAGS_{}", target.replace('-', "_")),
+                format!("--target={clang_target} -isysroot '{sdk}' -mmacosx-version-min=11.0"),
+            );
         }
         eprintln!("Building {target}");
         if !build.status()?.success() {
@@ -280,7 +331,7 @@ fn publish(version: &str) -> Result<()> {
     fs::write(
         dist.join("notes.md"),
         format!(
-            "{release_notes}\n\nTested on the developer's Linux x86-64 machine, two ARM64 Macs and an x86-64 Surface. Other architectures are **untested**. macOS builds are not Developer ID signed or notarized; Windows builds are unsigned. Operating-system security policies may block downloads. No signing or notarization bypass is performed by the installer.\n"
+            "{release_notes}\n\nTested on the developer's Linux x86-64 machine, an ARM64 Mac and an x86-64 Surface. Other architectures are **untested**. macOS builds are not Developer ID signed or notarized; Windows builds are unsigned. Operating-system security policies may block downloads. No signing or notarization bypass is performed by the installer.\n"
         ),
     )?;
     fs::copy("install.sh", dist.join("install.sh"))?;

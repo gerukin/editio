@@ -1,6 +1,33 @@
 # Validation
 
+For 0.1.1, the user accepted testing of the file monitoring and duplication update
+on the personal ARM64 Mac and x86-64 Surface after local Linux validation.
+The work Mac was unavailable for this update. Cross-compilation alone does not
+validate the other architectures at runtime.
+
 Editio is validated from this checkout with its private sibling `../tapp-ui`.
+
+## Duplication and external changes (2026-09-27)
+
+Local Linux x86_64: 287 app tests and 204 framework tests passed, plus formatting,
+strict Clippy, the framework minimal-feature check and native optimized build.
+Framework main: `76c1d74` (transactional save/reload support starts at `df3d98d`).
+Tests cover failure/cancellation without changing the original association,
+external writes and atomic replacement, symlink retargeting, watcher teardown,
+conflict dialogs, bounded reads, retained selections/search and recovery/exit.
+
+The optimized executable's real-PTY idle test sampled small Markdown and a
+3,750,000-byte source file in clean Edit, dirty Edit awaiting debounce, and View.
+All six two-second windows measured **0 CPU ticks, 0 voluntary thread context
+switches, and 0 terminal output bytes**, including native monitoring. This is a
+local measurement, not a guarantee for every filesystem or machine.
+
+```sh
+EDITIO_TEST_BINARY="$PWD/target/release/editio" cargo test --locked --test recovery_pty idle_clean_dirty_and_large_documents_sleep_without_polling -- --nocapture
+```
+
+Native macOS/Windows watcher delivery has not been tested in this change.
+Manual walkthrough: [file changes example](../examples/file-changes/README.md).
 
 ```sh
 cargo fmt --all --check

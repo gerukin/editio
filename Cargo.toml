@@ -1,6 +1,6 @@
 [package]
 name = "editio"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Terminal editor: a fast, minimal text viewer and editor"
 license = "MIT"
@@ -28,6 +28,7 @@ ec4rs = { version = "1.2", default-features = false, features = ["track-source"]
 globset = "0.4"
 ignore = "0.4.33"
 url = "2"
+notify = "8.2"
 
 [target.'cfg(unix)'.dependencies]
 libc = "0.2"
