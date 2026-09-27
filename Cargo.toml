@@ -43,6 +43,9 @@ merman = { version = "0.7", default-features = false, features = ["ascii"] }
 lto = "thin"
 strip = true
 
+[profile.dev]
+debug = "line-tables-only"
+
 
 [patch.crates-io]
 crossterm = { path = "../tapp-ui/vendor/crossterm" }
