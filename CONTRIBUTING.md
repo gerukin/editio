@@ -16,7 +16,8 @@ cargo fmt --check
 cargo clippy --locked --all-targets -- -D warnings
 ```
 
-Normal builds target only your machine. Use `cargo build --release --locked`
+Normal builds target only your machine. Use
+`cargo run --locked --manifest-path tools/release/Cargo.toml -- refresh-local`
 when intentionally refreshing the local optimized executable. All application
 code, tests and development tools are Rust; the shell installer and Homebrew
 formula are small platform packaging adapters.

@@ -68,9 +68,10 @@ not require a separate Visual C++ runtime installation.
 ## Local development
 
 `cargo run -- notes.md` / `cargo build` build only for this machine.
-The existing `~/.local/bin/editio` symlink points to `target/release/editio`;
-use `cargo build --release --locked` when intentionally refreshing that native
-optimized binary. Nothing implicitly builds other platforms.
+The `~/.local/bin/editio` symlink points to `target/release/editio`. To refresh
+the native optimized binary, verify its version and update the symlink, run
+`cargo run --locked --manifest-path tools/release/Cargo.toml -- refresh-local`.
+Nothing implicitly builds other platforms.
 
 ## Local publishing
 
@@ -94,7 +95,7 @@ Before first publication:
    `Formula/editio.rb` and `Casks/editio.rb` content using actual archive checksums.
 
 For each release, update Cargo's version and move the relevant `Unreleased`
-entries under `## [0.1.0] - YYYY-MM-DD` (using the actual version/date). Keep an
+entries under `## [<version>] - YYYY-MM-DD` (using the actual version/date). Keep an
 empty `Unreleased` section above it, following `gerukin/ai-tester`. Commit Editio
 and framework changes. Then explicitly run:
 
@@ -106,7 +107,8 @@ This builds all six optimized binaries into `target/publish` (Unix) and `target/
 creates archives/checksums and Homebrew recipes under `dist/<version>`, pushes
 Editio's HEAD to `origin/main`, and uploads a **draft** GitHub Release. Nothing is
 pushed until all six builds/package steps succeed. Framework source is never
-uploaded. Both source commit IDs are recorded in the archives.
+uploaded. Both source commit IDs are recorded in the archives. The helper checks
+the native binary's `--version` before and after archiving.
 
 Linux uses Zig with a glibc 2.28 baseline. macOS uses Clang and Rust's bundled
 `ld64.lld` with the local SDK to enforce macOS 11 (Zig may raise that minimum).
@@ -118,6 +120,11 @@ commit, and push them. This is only
 package metadata: no rebuild. Existing releases are not overwritten. If upload
 fails, recover the draft using `gh release upload` and the existing `dist` files;
 do not rebuild unless sources changed.
+
+After publication, run
+`cargo run --locked --manifest-path tools/release/Cargo.toml -- refresh-local`
+and confirm `editio --version` matches the released version. This refreshes only
+the local development installation.
 
 The shell installer and Homebrew recipes are small platform packaging adapters;
 the editor and local publishing tool remain Rust.
