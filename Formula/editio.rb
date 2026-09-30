@@ -1,28 +1,28 @@
 class Editio < Formula
   desc "Fast, minimal terminal text viewer and editor"
   homepage "https://github.com/gerukin/editio"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_linux do
     on_intel do
-      url "https://github.com/gerukin/editio/releases/download/v0.1.1/editio-0.1.1-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "74d40def5ab778fe8b0704fac58cd00fd0a369ddfe83e6440c32b4670262b4b8"
+      url "https://github.com/gerukin/editio/releases/download/v0.1.2/editio-0.1.2-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "dde1bea4c0768ed855a341dd42f02acf47ba54d53ec501b883a078e4bb9b5ce0"
     end
     on_arm do
-      url "https://github.com/gerukin/editio/releases/download/v0.1.1/editio-0.1.1-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "cc1a8ee7b8ae60f08d51a6c1e977db2bf5547827239f396144ad367e9db8b3de"
+      url "https://github.com/gerukin/editio/releases/download/v0.1.2/editio-0.1.2-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "bf28fbc9710506f19e9112934a29a58075333114cf3bb8d1826ef64517ed060d"
     end
   end
 
   on_macos do
     on_intel do
-      url "https://github.com/gerukin/editio/releases/download/v0.1.1/editio-0.1.1-x86_64-apple-darwin.tar.gz"
-      sha256 "53333696d0a132613505bb8d5af4b53533f850fb3225ccfda690469a623f3205"
+      url "https://github.com/gerukin/editio/releases/download/v0.1.2/editio-0.1.2-x86_64-apple-darwin.tar.gz"
+      sha256 "fe339a10795d4bcdd55c212cc8a9bd60fdf73732a7f66436fafb359d37fefa7e"
     end
     on_arm do
-      url "https://github.com/gerukin/editio/releases/download/v0.1.1/editio-0.1.1-aarch64-apple-darwin.tar.gz"
-      sha256 "a0894232fb571a1f5ed0c716e55769c6cc1e37fc8c28bdfedb5625f5b9f2f7a2"
+      url "https://github.com/gerukin/editio/releases/download/v0.1.2/editio-0.1.2-aarch64-apple-darwin.tar.gz"
+      sha256 "73bd94081a406cbc7b3cf6ff4e7514ff61c2f4f55ed993d11acc320a86137ed0"
     end
   end
 
