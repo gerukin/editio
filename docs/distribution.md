@@ -166,5 +166,9 @@ development executable was rebuilt and reports 0.1.2.
 The public installer upgraded the personal ARM64 Mac's active installation from
 0.1.0 to 0.1.2. Homebrew upgraded the work ARM64 Mac from 0.1.1 to 0.1.2;
 after the user approved execution through macOS, its version check passed.
-Both installed Mac executables match the released binary's SHA256. These checks
+Both installed Mac executables match the released binary's SHA256.
+
+After Editio was closed, a checksum-verified public ZIP upgraded the x86-64
+Surface's active installation from 0.1.0 to 0.1.2. Its installed executable
+reports 0.1.2 and matches the released Windows binary's SHA256. These checks
 verify installation and startup, not native terminal selection gestures.
