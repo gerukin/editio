@@ -421,6 +421,15 @@ fn shift_click_extends_rendered_selection_without_activating_link() {
         modifiers: M::SHIFT,
     }));
     assert_eq!(result, Outcome::Handled);
+    assert_eq!(
+        e.handle(Event::Mouse(MouseEvent {
+            kind: MK::Up(B::Left),
+            column: x,
+            row: y,
+            modifiers: M::SHIFT,
+        })),
+        Outcome::Handled
+    );
     assert_eq!(e.act(Action::Copy), Outcome::CopyRequested("alpha".into()));
 }
 

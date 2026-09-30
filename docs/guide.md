@@ -110,7 +110,16 @@ Line shortcuts follow the [VS Code platform defaults](https://code.visualstudio.
 | Add cursor above/below | Shift+Alt+↑/↓ | Ctrl+Alt+↑/↓ | Cmd+Option+↑/↓ |
 | Delete current/selected lines | Ctrl+Shift+K | Ctrl+Shift+K | Cmd+Shift+K |
 
-Ctrl+Alt+↑/↓ also adds cursors on Linux/macOS, and Ctrl+Shift+K works on macOS when delivered by the terminal. Copy/delete acts on every cursor's touched lines, merges overlapping targets, and undoes as one action. Selections ending at the next line's beginning exclude that line. Copies preserve selections and place cursors on the copied lines. Repeated cursor addition retains the visual column across short lines, tabs, and Unicode text.
+**Ctrl+Option+↑/↓** also adds cursors on macOS (Ctrl+Alt+↑/↓ on Linux).
+Use it in Ghostty: its default macOS **Cmd+Option+↑/↓** bindings move between
+terminal splits and consume the keys before Editio sees them. The palette shows
+both Mac shortcuts. To keep the Command shortcut instead, explicitly override
+those Ghostty bindings with `keybind = super+alt+up=unbind` and
+`keybind = super+alt+down=unbind`, then reload Ghostty's configuration. See
+[Ghostty keybindings](https://ghostty.org/docs/config/keybind) and its
+[default bindings](https://github.com/ghostty-org/ghostty/blob/main/src/config/Config.zig).
+
+Ctrl+Shift+K works on macOS when delivered by the terminal. Copy/delete acts on every cursor's touched lines, merges overlapping targets, and undoes as one action. Selections ending at the next line's beginning exclude that line. Copies preserve selections and place cursors on the copied lines. Repeated cursor addition retains the visual column across short lines, tabs, and Unicode text.
 
 If a shortcut is intercepted or your terminal cannot distinguish Ctrl+Shift+K, search for the action in the command palette. The standalone app requests enhanced keyboard reporting on Unix terminals that support it; embedded hosts own that terminal configuration.
 
@@ -124,7 +133,17 @@ Saving a path that did not exist when opened asks for confirmation before creati
 
 Find defaults to case-insensitive matching. Its single-line footer adapts to available width and keeps a right-aligned Ctrl+K reminder for the palette of case, fuzzy, and wildcard toggles. Choosing a setting or dismissing that palette returns to Find with the query preserved. Find retains its query, options, input cursor, and result selection for the current editor session. Files up to 64 KiB search immediately; larger files use a 150 ms debounce and cancellable background scanning. A bounded list shows highlighted matches in context. Enter or click opens a result in the document, where Tab/Shift+Tab and Up/Down navigate hits and Page Up/Down select the first/last loaded hit. Continue past the last hit to load another batch (up to 1,000 hits); `+` means the total is not yet known. Previous batches can be revisited. Esc exits search mode; Ctrl+F reopens its saved state. The palette’s Next/Previous occurrence commands start the same flow for a word or selection. Search preserves the underlying view or edit mode: rendered previews search visible content and highlight it in place, excluding hidden Markdown comments and URLs. Use source view to search raw markup.
 
-Click source text to place a cursor, drag to select, double-click a word, or Alt+click to add a cursor. In rendered previews, drag selects the visible characters and Ctrl+C copies them without changing mode or switching to source. Selections starting inside a table cell or diagram box stay within its interior. Markdown link labels hide their URLs: click to copy the URL, or right-click for a menu to copy text or URL (also operable with arrows/Enter/Esc). Terminal-native selection/copy commonly uses Shift+drag; exact behavior belongs to the terminal. Ctrl+K may be reserved by a terminal, input method, or custom multiplexer configuration; use Ctrl+Shift+P or F2. Additional modifier combinations depend on the terminal keyboard protocol.
+Click source text to place a cursor, drag to select, double-click a word, or Alt+click to add a cursor. **Shift+click** extends the selection from its existing anchor; repeated clicks can extend, shrink, or reverse it. In rendered previews, click to establish an anchor, then Shift+click to select visible text without activating a link; drag also selects and Ctrl+C copies without changing mode or switching to source. Selections starting inside a table cell or diagram box stay within its interior. Markdown link labels hide their URLs: click to copy the URL, or right-click for a menu to copy text or URL (also operable with arrows/Enter/Esc).
+
+The standalone app requests Shift mouse reporting on Unix through
+[XTSHIFTESCAPE](https://ghostty.org/docs/vt/csi/xtshiftescape), so supporting
+terminals such as Ghostty forward Shift+click/drag to Editio. The request is
+released on exit. A terminal can ignore or prohibit it (for example, Ghostty's
+`mouse-shift-capture = never`), and multiplexers may not forward it; Shift+arrows
+remain available. While forwarding Shift, terminal-native selection requires
+the terminal's own mouse override. Ctrl+K may be reserved by a terminal, input
+method, or custom multiplexer configuration; use Ctrl+Shift+P or F2. Additional
+modifier combinations depend on the terminal keyboard protocol.
 
 ## Included
 

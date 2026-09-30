@@ -7,6 +7,34 @@ validate the other architectures at runtime.
 
 Editio is validated from this checkout with its private sibling `../tapp-ui`.
 
+## Shift mouse selection and Mac cursor shortcuts (2026-09-30)
+
+Local Linux x86_64: all 290 app tests passed (seven intentional ignores), along
+with formatting, strict app/framework Clippy, all-feature framework tests and
+the framework no-default-features check. The native optimized executable was
+rebuilt and passed all three terminal lifecycle/selection PTY tests; the existing
+local executable symlink points to that build.
+
+The new PTY case extends then shrinks a selection using Shift mouse reports,
+replaces and saves the selected text, and checks XTSHIFTESCAPE startup/cleanup
+ordering. Offset TestBackend tests cover source View/Edit, wrapping enabled and
+disabled, wide Unicode, tabs, reversed selections, continued dragging and copy
+on release. Preview mouse release does not activate a Shift-selected link.
+Ctrl+Option cursor addition retains text and edits every cursor together.
+Framework commit: `dd8b0d8`.
+
+Ghostty's Mac defaults reserve Cmd+Option+Up/Down for terminal split navigation.
+The existing Ctrl+Option fallback is now visible in the Mac command labels.
+The framework's Mac key-normalization unit test runs on Linux; the added
+native-Mac-only editor dispatch test was not run. Actual macOS/Windows terminal
+gestures and multiplexer forwarding remain unverified.
+
+The managed environment injects `/tmp/.git`, which breaks the existing test for
+search outside a repository even in escalated execution. The successful full
+suite used `TMPDIR=/var/tmp` outside the sandbox, without changing that test.
+Shared implementation and evidence:
+[`2026-09-30-shift-mouse-and-mac-cursor-shortcuts.md`](../../tapp-ui/changes/2026-09-30-shift-mouse-and-mac-cursor-shortcuts.md).
+
 ## Duplication and external changes (2026-09-27)
 
 Local Linux x86_64: 287 app tests and 204 framework tests passed, plus formatting,

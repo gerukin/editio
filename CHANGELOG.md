@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.2] - 2026-09-30
+
+### Fixed
+
+- Request Shift mouse reporting in supporting Unix terminals so Shift-click
+  reaches source and preview selection; release the request during cleanup.
+- Show Ctrl+Option+↑/↓ alongside the Mac cursor shortcuts and document Ghostty's
+  conflicting Cmd+Option+↑/↓ split-navigation bindings.
+
 ## [0.1.1] - 2026-09-26
 
 ### Added

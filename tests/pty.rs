@@ -18,16 +18,21 @@ impl Drop for Process {
 
 #[test]
 fn actual_terminal_theme_toggle_quit_and_lifecycle_restore() {
-    terminal_lifecycle(None);
+    terminal_lifecycle(None, false);
+}
+
+#[test]
+fn actual_terminal_shift_click_extends_and_shrinks_selection() {
+    terminal_lifecycle(None, true);
 }
 
 #[test]
 fn selected_rows_follow_light_and_dark_terminal_backgrounds() {
-    terminal_lifecycle(Some(("ffff/ffff/ffff", "48;2;239;239;239")));
-    terminal_lifecycle(Some(("1a1a/1b1b/2626", "48;2;32;33;44")));
+    terminal_lifecycle(Some(("ffff/ffff/ffff", "48;2;239;239;239")), false);
+    terminal_lifecycle(Some(("1a1a/1b1b/2626", "48;2;32;33;44")), false);
 }
 
-fn terminal_lifecycle(palette: Option<(&str, &str)>) {
+fn terminal_lifecycle(palette: Option<(&str, &str)>, select: bool) {
     let mut master = -1;
     let mut slave = -1;
     let mut size = libc::winsize {
@@ -59,10 +64,17 @@ fn terminal_lifecycle(palette: Option<(&str, &str)>) {
         libc::fcntl(master.as_raw_fd(), libc::F_SETFL, libc::O_NONBLOCK);
     }
     let dir = tempfile::tempdir().unwrap();
+    let source = dir.path().join("selection.txt");
+    if select {
+        std::fs::write(&source, "alpha beta").unwrap();
+    }
     let theme = dir.path().join(".config/editio/config.json");
     let binary = std::env::var_os("EDITIO_TEST_BINARY")
         .unwrap_or_else(|| env!("CARGO_BIN_EXE_editio").into());
     let mut command = Command::new(binary);
+    if select {
+        command.arg(&source);
+    }
     // Give the child its own controlling terminal for the startup OSC query.
     unsafe {
         command.pre_exec(|| {
@@ -126,6 +138,16 @@ fn terminal_lifecycle(palette: Option<(&str, &str)>) {
                     );
                 }
             }
+            if select {
+                // Source caret at character 1, extend to 8, then shrink to 6.
+                // SGR modifier value 4 reports Shift; release must retain the anchor.
+                master.write_all(b"g\x1b[<0;2;1M\x1b[<0;2;1m\x1b[<4;9;1M\x1b[<4;9;1m\x1b[<4;7;1M\x1b[<4;7;1mX\x13").unwrap();
+                phase = 4;
+            } else {
+                master.write_all(b"\x0bToggle theme").unwrap();
+                phase = 1;
+            }
+        } else if phase == 4 && std::fs::read_to_string(&source).unwrap() == "aXbeta" {
             master.write_all(b"\x0bToggle theme").unwrap();
             phase = 1;
         } else if phase == 1 && text.contains("Toggle theme") {
@@ -165,6 +187,13 @@ fn terminal_lifecycle(palette: Option<(&str, &str)>) {
         text.contains("?1049h") && text.contains("?1049l"),
         "alternate screen restored"
     );
+    let capture = text
+        .find("\x1b[>1s")
+        .expect("Shift mouse capture requested");
+    let release = text
+        .rfind("\x1b[>0s")
+        .expect("Shift mouse capture released");
+    assert!(capture < release && release < text.rfind("\x1b[?1049l").unwrap());
     assert!(
         text.contains("38;2;") || text.contains("48;2;"),
         "fixed palette rendered as RGB: {text:?}"

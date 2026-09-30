@@ -13,10 +13,10 @@ Issues and PRs are welcome; accepting a PR does not grant repository access.
 - **mise (including Omarchy/Arch):** `mise use -g github:gerukin/editio@latest`.
   Update with `mise upgrade github:gerukin/editio`. mise's default 24-hour release
   age rule can temporarily hide a brand-new version from `@latest`. Install
-  `github:gerukin/editio@0.1.1` explicitly during that window; use
+  `github:gerukin/editio@0.1.2` explicitly during that window; use
   `mise use -g github:gerukin/editio@latest` afterward to follow releases.
 - **Linux/macOS installer:** use the one-liner below for installation and updates.
-  Append `-s -- 0.1.1` to `sh` to select a specific version.
+  Append `-s -- 0.1.2` to `sh` to select a specific version.
   Default: `~/.local/bin`; override with `EDITIO_INSTALL_DIR`.
 - **Homebrew:** `brew tap gerukin/editio https://github.com/gerukin/editio`, then
   `brew install --cask gerukin/editio/editio` on macOS. Update with
