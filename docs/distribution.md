@@ -154,3 +154,17 @@ passed Ruby syntax checks; a live Homebrew upgrade was not repeated this release
 User testing of the feature update passed on Linux x86-64, the personal ARM64 Mac
 and x86-64 Surface before publication. Linux ARM64, macOS Intel and Windows ARM64
 remain untested at runtime. Developer installations were left unchanged.
+
+## 0.1.2 installation checks
+
+All six uploaded archives were downloaded and verified against SHA256SUMS.
+Both Linux builds require at most glibc 2.28; both macOS builds declare minimum
+macOS 11. Both Windows builds import system DLLs without a separate VC runtime.
+The generated Homebrew recipes passed Ruby syntax checks. The local Linux
+development executable was rebuilt and reports 0.1.2.
+
+The public installer upgraded the personal ARM64 Mac's active installation from
+0.1.0 to 0.1.2. Homebrew upgraded the work ARM64 Mac from 0.1.1 to 0.1.2;
+after the user approved execution through macOS, its version check passed.
+Both installed Mac executables match the released binary's SHA256. These checks
+verify installation and startup, not native terminal selection gestures.
